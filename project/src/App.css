@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   color: #1C3E3A;
   background-color: #FFFFFF;
@@ -15,11 +15,11 @@ body {
   overflow-x: hidden;
 }
 
-/* Animations */
+/* Essential animations only */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -27,36 +27,12 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 .slide-in-right {
-  animation: slideInRight 0.6s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 /* Smooth scrolling */
@@ -64,56 +40,38 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - simplified */
 ::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #1C3E3A;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #0f2623;
+  border-radius: 3px;
 }
 
 /* Section spacing */
 section {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
-/* Typography */
+/* Typography - simplified */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 16px;
-}
-
-h1 {
-  font-size: 3.5rem;
   color: #1C3E3A;
 }
 
-h2 {
-  font-size: 2.5rem;
-  color: #1C3E3A;
-}
-
-h3 {
-  font-size: 1.5rem;
-  color: #1C3E3A;
-}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.4rem; }
 
 p {
   line-height: 1.6;
@@ -121,20 +79,19 @@ p {
   color: #7D7D7D;
 }
 
-/* Buttons */
+/* Buttons - simplified */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 16px 32px;
+  padding: 14px 28px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
+  transition: all 0.2s ease;
 }
 
 .btn-primary {
@@ -144,8 +101,7 @@ p {
 
 .btn-primary:hover {
   background-color: #0f2623;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(28, 62, 58, 0.3);
+  transform: translateY(-1px);
 }
 
 .btn-whatsapp {
@@ -155,8 +111,7 @@ p {
 
 .btn-whatsapp:hover {
   background-color: #22c55e;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -170,55 +125,24 @@ p {
   color: white;
 }
 
-/* Cards */
+/* Cards - simplified */
 .card {
   background: white;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  section {
-    padding: 48px 0;
-  }
-  
-  .container {
-    padding: 0 16px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  .btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  .card {
-    padding: 24px;
-  }
+  section { padding: 40px 0; }
+  .container { padding: 0 16px; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  .btn { padding: 12px 20px; }
 }

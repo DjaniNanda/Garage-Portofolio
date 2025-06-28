@@ -36,7 +36,7 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -52,12 +52,11 @@
   gap: 8px;
   background: rgba(168, 216, 195, 0.2);
   border: 1px solid rgba(168, 216, 195, 0.3);
-  padding: 8px 16px;
-  border-radius: 24px;
+  padding: 6px 12px;
+  border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  margin-bottom: 24px;
-  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
 }
 
 .badge-icon {
@@ -67,17 +66,17 @@
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   color: white;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -90,12 +89,12 @@
 .hero-stats {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
-  padding: 48px 32px;
+  border-radius: 16px;
+  padding: 32px 24px;
 }
 
 .stat-item {
@@ -104,14 +103,14 @@
 }
 
 .stat-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #A8D8C3;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .stat-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
 }
@@ -124,16 +123,16 @@
   
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
     text-align: center;
   }
   
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .hero-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .hero-buttons {
@@ -143,25 +142,10 @@
   .hero-stats {
     flex-direction: row;
     justify-content: space-around;
-    padding: 32px 24px;
+    padding: 24px 16px;
   }
   
   .stat-number {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-stats {
-    flex-direction: column;
-    gap: 24px;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
   }
 }
