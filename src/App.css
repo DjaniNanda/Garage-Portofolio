@@ -8,21 +8,13 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   color: #1C3E3A;
-<<<<<<< HEAD
-  background-color: #FFFFFF;
-=======
   background: #fff;
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 }
 
 .App {
   overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-/* Essential animations only */
-=======
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -34,30 +26,14 @@ body {
   }
 }
 
-<<<<<<< HEAD
-.fade-in-up {
-  animation: fadeInUp 0.4s ease-out forwards;
-}
-
-.slide-in-right {
-  animation: fadeInUp 0.4s ease-out forwards;
-}
-
-/* Smooth scrolling */
-=======
 .fade-in-up, .slide-in-right {
   animation: fadeInUp 0.4s ease-out forwards;
 }
 
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 html {
   scroll-behavior: smooth;
 }
 
-<<<<<<< HEAD
-/* Custom scrollbar - simplified */
-=======
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -67,10 +43,6 @@ html {
   border-radius: 3px;
 }
 
-<<<<<<< HEAD
-/* Section spacing */
-=======
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 section {
   padding: 60px 0;
 }
@@ -81,10 +53,6 @@ section {
   padding: 0 20px;
 }
 
-<<<<<<< HEAD
-/* Typography - simplified */
-=======
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -102,10 +70,6 @@ p {
   color: #7D7D7D;
 }
 
-<<<<<<< HEAD
-/* Buttons - simplified */
-=======
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 .btn {
   display: inline-flex;
   align-items: center;
@@ -121,64 +85,36 @@ p {
 }
 
 .btn-primary {
-<<<<<<< HEAD
-  background-color: #1C3E3A;
-=======
   background: #1C3E3A;
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
   color: white;
 }
 
 .btn-primary:hover {
-<<<<<<< HEAD
-  background-color: #0f2623;
-=======
   background: #0f2623;
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
   transform: translateY(-1px);
 }
 
 .btn-whatsapp {
-<<<<<<< HEAD
-  background-color: #25D366;
-=======
   background: #25D366;
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
   color: white;
 }
 
 .btn-whatsapp:hover {
-<<<<<<< HEAD
-  background-color: #22c55e;
-=======
   background: #22c55e;
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
   transform: translateY(-1px);
 }
 
 .btn-secondary {
-<<<<<<< HEAD
-  background-color: transparent;
-=======
   background: transparent;
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
   color: #1C3E3A;
   border: 2px solid #1C3E3A;
 }
 
 .btn-secondary:hover {
-<<<<<<< HEAD
-  background-color: #1C3E3A;
-  color: white;
-}
-
-/* Cards - simplified */
-=======
   background: #1C3E3A;
   color: white;
 }
 
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 .card {
   background: white;
   border-radius: 12px;
@@ -191,10 +127,6 @@ p {
   transform: translateY(-4px);
 }
 
-<<<<<<< HEAD
-/* Responsive */
-=======
->>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
 @media (max-width: 768px) {
   section { padding: 40px 0; }
   .container { padding: 0 16px; }
