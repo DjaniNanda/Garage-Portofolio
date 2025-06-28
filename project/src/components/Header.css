@@ -11,7 +11,11 @@
 }
 
 .header.scrolled {
+<<<<<<< HEAD
   background-color: rgba(255, 255, 255, 0.98);
+=======
+  background: rgba(255, 255, 255, 0.98);
+>>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -65,7 +69,11 @@
   left: 0;
   width: 0;
   height: 2px;
+<<<<<<< HEAD
   background-color: #A8D8C3;
+=======
+  background: #A8D8C3;
+>>>>>>> cdff7487f3c186a91e6e5314e4bbd9c9d1f32149
   transition: width 0.2s ease;
 }
 
