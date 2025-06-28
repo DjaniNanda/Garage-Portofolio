@@ -1,0 +1,133 @@
+.services {
+  background-color: #f8fffe;
+  position: relative;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.services-header h2 {
+  color: #1C3E3A;
+  margin-bottom: 16px;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #7D7D7D;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(168, 216, 195, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1C3E3A 0%, #A8D8C3 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(28, 62, 58, 0.15);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #1C3E3A 0%, #A8D8C3 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.service-card h3 {
+  color: #1C3E3A;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+.service-card p {
+  color: #7D7D7D;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  background: #f0f9f5;
+  color: #1C3E3A;
+  padding: 8px 16px;
+  margin: 8px 0;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.service-features li::before {
+  content: '✓';
+  color: #A8D8C3;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .service-card {
+    padding: 24px;
+  }
+  
+  .services-header {
+    margin-bottom: 48px;
+  }
+}
