@@ -17,7 +17,7 @@
 }
 
 .about-intro {
-  font-size: 1.2rem;
+  font-size: o.8rem;
   color: #7D7D7D;
   margin-bottom: 32px;
   line-height: 1.7;
@@ -32,7 +32,7 @@
 .about-expertise h3 {
   color: #1C3E3A;
   margin-bottom: 16px;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 
 .about-story p {
@@ -91,13 +91,13 @@
 .overlay-content h4 {
   color: white;
   margin-bottom: 4px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .overlay-content p {
   color: #A8D8C3;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.5rem;
 }
 
 .about-values {
@@ -107,7 +107,7 @@
 .values-title {
   color: #1C3E3A;
   margin-bottom: 48px;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .values-grid {
@@ -151,7 +151,7 @@
 .value-card h4 {
   color: #1C3E3A;
   margin-bottom: 12px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .value-card p {
