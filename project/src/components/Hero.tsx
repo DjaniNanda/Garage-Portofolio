@@ -4,7 +4,7 @@ import './Hero.css';
 
 const Hero: React.FC = () => {
   const openWhatsApp = () => {
-    const phoneNumber = "237123456789"; // Remplacez par votre numéro WhatsApp
+    const phoneNumber = "+237680075429"; 
     const message = "Bonjour, je souhaiterais prendre rendez-vous pour mon véhicule chez Exact Automobile.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
@@ -15,8 +15,11 @@ const Hero: React.FC = () => {
       <div className="hero-background">
         <img 
           src="/IMG-20250625-WA0010.jpg" 
-          alt="Exact Automobile - Garage moderne à Yaoundé" 
+          alt="Exact Automobile - Garage moderne à Terminus Mimboman, Yaoundé" 
           className="hero-image"
+          loading="eager"
+          width="1920"
+          height="1080"
         />
         <div className="hero-overlay"></div>
       </div>
@@ -25,20 +28,24 @@ const Hero: React.FC = () => {
         <div className="hero-content">
           <div className="hero-text fade-in-up">
             <div className="hero-badge">
-              <Star className="badge-icon" />
+              <Star className="badge-icon" aria-hidden="true" />
               <span>Garage de confiance à Yaoundé</span>
             </div>
             
-            <h1>Exact Automobile - Votre partenaire mécanique</h1>
+            <h1>Exact Automobile - Votre partenaire mécanique à Yaoundé</h1>
             <p>
-              Situé à Terminus Mimboman, Yaoundé, notre équipe d'experts s'occupe 
-              de votre véhicule avec professionnalisme et précision. Diagnostic, 
+              Situé à Terminus Mimboman, Yaoundé, notre équipe de plus de 20 mécaniciens experts 
+              s'occupe de votre véhicule avec professionnalisme et précision. Diagnostic, 
               réparation, entretien - nous maîtrisons tous les aspects de la mécanique automobile.
             </p>
             
             <div className="hero-buttons">
-              <button onClick={openWhatsApp} className="btn btn-whatsapp">
-                <MessageCircle />
+              <button 
+                onClick={openWhatsApp} 
+                className="btn btn-whatsapp"
+                aria-label="Prendre rendez-vous via WhatsApp"
+              >
+                <MessageCircle aria-hidden="true" />
                 Prendre rendez-vous
               </button>
               <button 
@@ -47,6 +54,7 @@ const Hero: React.FC = () => {
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="btn btn-secondary"
+                aria-label="Voir nos services"
               >
                 Nos services
               </button>

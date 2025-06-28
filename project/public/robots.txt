@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://exactautomobile.cm/sitemap.xml
+
+# Optimisation pour les moteurs de recherche
+Crawl-delay: 1
+
+# Interdire l'accès aux fichiers sensibles
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /api/

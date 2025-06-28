@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact: React.FC = () => {
   const openWhatsApp = () => {
-    const phoneNumber = "237123456789"; // Remplacez par votre vrai numéro
+    const phoneNumber = "+237680075429"; 
     const message = "Bonjour, je souhaiterais prendre rendez-vous pour mon véhicule chez Exact Automobile.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
@@ -49,11 +49,11 @@ const Contact: React.FC = () => {
                 <div className="hours">
                   <div className="hour-row">
                     <span>Lundi - Vendredi</span>
-                    <span>7h00 - 18h00</span>
+                    <span>8h00 - 17h30</span>
                   </div>
                   <div className="hour-row">
                     <span>Samedi</span>
-                    <span>7h00 - 15h00</span>
+                    <span>8h00 - 14h00</span>
                   </div>
                   <div className="hour-row closed">
                     <span>Dimanche</span>
@@ -69,8 +69,8 @@ const Contact: React.FC = () => {
               </div>
               <div className="contact-details">
                 <h3>Téléphone</h3>
-                <p>+237 123 456 789</p>
-                <a href="tel:+237123456789" className="contact-link">
+                <p>+237 6 80 07 54 29</p>
+                <a href="tel:+237680075429" className="contact-link">
                   Appeler maintenant
                 </a>
               </div>

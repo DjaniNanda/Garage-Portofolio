@@ -36,7 +36,7 @@ const About: React.FC = () => {
               Situé au cœur de Terminus Mimboman à Yaoundé, Exact Automobile est 
               votre garage de référence pour tous vos besoins en mécanique automobile. 
               Notre équipe de mécaniciens qualifiés met son expertise au service 
-              de votre mobilité.
+              de votre mobilité depuis plusieurs années.
             </p>
             
             <div className="about-story">
@@ -45,19 +45,19 @@ const About: React.FC = () => {
                 Chez Exact Automobile, nous combinons savoir-faire traditionnel et 
                 technologies modernes pour offrir des services de qualité supérieure. 
                 Notre atelier est équipé des derniers outils de diagnostic et notre 
-                équipe est formée aux techniques les plus récentes.
+                équipe est formée aux techniques les plus récentes de la mécanique automobile.
               </p>
             </div>
 
             <div className="about-expertise">
               <h3>Nos Spécialités</h3>
               <ul>
-                <li>Diagnostic électronique avancé</li>
-                <li>Réparation moteur toutes marques</li>
+                <li>Diagnostic électronique avancé toutes marques</li>
+                <li>Réparation moteur essence et diesel</li>
                 <li>Entretien préventif et curatif</li>
                 <li>Système de freinage et suspension</li>
                 <li>Climatisation automobile</li>
-                <li>Électricité et électronique auto</li>
+                <li>Électricité et électronique automobile</li>
               </ul>
             </div>
           </div>
@@ -65,7 +65,10 @@ const About: React.FC = () => {
           <div className="about-image slide-in-right">
             <img 
               src="/495177214_1241509317979575_6219899708439107088_n.jpg" 
-              alt="Équipe Exact Automobile Yaoundé" 
+              alt="Équipe de mécaniciens experts d'Exact Automobile à Yaoundé" 
+              loading="lazy"
+              width="600"
+              height="400"
             />
             <div className="image-overlay">
               <div className="overlay-content">
@@ -85,7 +88,7 @@ const About: React.FC = () => {
                 className="value-card fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="value-icon">
+                <div className="value-icon" aria-hidden="true">
                   {value.icon}
                 </div>
                 <h4>{value.title}</h4>

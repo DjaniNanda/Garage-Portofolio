@@ -4,7 +4,7 @@ import './Footer.css';
 
 const Footer: React.FC = () => {
   const openWhatsApp = () => {
-    const phoneNumber = "237123456789";
+    const phoneNumber = "+237680075429";
     const message = "Bonjour, je souhaiterais prendre rendez-vous pour mon véhicule chez Exact Automobile.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="contact-item">
                 <Phone />
-                <span>+237 123 456 789</span>
+                <span>+237 6 80 07 54 29</span>
               </div>
               <div className="contact-item">
                 <Mail />
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="contact-item">
                 <Clock />
-                <span>Lun-Ven: 7h-18h<br />Sam: 7h-15h</span>
+                <span>Lun-Ven: 8h00-17h30<br />Sam: 8h00h-14h00</span>
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ const Testimonials: React.FC = () => {
   ];
 
   const openWhatsApp = () => {
-    const phoneNumber = "237123456789";
+    const phoneNumber = "+237680075429";
     const message = "Bonjour, je souhaiterais prendre rendez-vous pour mon véhicule chez Exact Automobile.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

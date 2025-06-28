@@ -1,5 +1,5 @@
 .services {
-  background-color: #f8fffe;
+  background: linear-gradient(135deg, #1C3E3A 0%, #2a5a54 100%);
   position: relative;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .services-header h2 {
-  color: #1C3E3A;
+  color: white;
   margin-bottom: 16px;
 }
 
