@@ -63,12 +63,6 @@ export default defineConfig({
   },
   css: {
     devSourcemap: false,
-    postcss: {
-      plugins: [
-        require('autoprefixer'),
-        require('tailwindcss'),
-      ],
-    },
   },
   esbuild: {
     drop: ['console', 'debugger'],
