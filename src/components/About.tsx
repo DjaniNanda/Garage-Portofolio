@@ -52,12 +52,13 @@ const About: React.FC = () => {
             <div className="about-expertise">
               <h3>Nos Spécialités</h3>
               <ul>
-                <li>Diagnostic électronique avancé toutes marques</li>
+                <li>Diagnostic électronique</li>
                 <li>Réparation moteur essence et diesel</li>
                 <li>Entretien préventif et curatif</li>
                 <li>Système de freinage et suspension</li>
                 <li>Climatisation automobile</li>
                 <li>Électricité et électronique automobile</li>
+                <li>Tolerie et painture</li>
               </ul>
             </div>
           </div>
