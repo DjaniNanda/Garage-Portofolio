@@ -135,7 +135,9 @@
     padding-bottom: 2rem;
   }
   
-  
+  .hero-text{
+    margin-top: 2rem;
+  }
   .hero-buttons {
     justify-content: center;
   }
