@@ -5,31 +5,31 @@
 
 .services-header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 4rem;
 }
 
 .services-header h2 {
   color: white;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .services-header p {
-  font-size: 1.2rem;
-  color: #7D7D7D;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.8);
   max-width: 600px;
   margin: 0 auto;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .service-card {
   background: white;
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: 1rem;
+  padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(168, 216, 195, 0.2);
@@ -60,14 +60,14 @@
 }
 
 .service-icon {
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
   background: linear-gradient(135deg, #1C3E3A 0%, #A8D8C3 100%);
-  border-radius: 16px;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 24px;
+  margin: 0 auto 1.5rem;
   color: white;
   transition: transform 0.3s ease;
 }
@@ -77,20 +77,21 @@
 }
 
 .service-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .service-card h3 {
   color: #1C3E3A;
-  margin-bottom: 16px;
-  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
 .service-card p {
   color: #7D7D7D;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 .service-features {
@@ -102,9 +103,9 @@
 .service-features li {
   background: #f0f9f5;
   color: #1C3E3A;
-  padding: 8px 16px;
-  margin: 8px 0;
-  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 1.25rem;
   font-size: 0.9rem;
   font-weight: 500;
   position: relative;
@@ -114,20 +115,20 @@
   content: '✓';
   color: #A8D8C3;
   font-weight: bold;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 1.5rem;
   }
   
   .service-card {
-    padding: 24px;
+    padding: 1.5rem;
   }
   
   .services-header {
-    margin-bottom: 48px;
+    margin-bottom: 3rem;
   }
 }

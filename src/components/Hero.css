@@ -36,7 +36,7 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 4rem;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -49,53 +49,53 @@
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   background: rgba(168, 216, 195, 0.2);
   border: 1px solid rgba(168, 216, 195, 0.3);
-  padding: 8px 16px;
-  border-radius: 24px;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
   font-size: 0.9rem;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   backdrop-filter: blur(10px);
 }
 
 .badge-icon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: #A8D8C3;
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   color: white;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .hero-stats {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
-  padding: 48px 32px;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
 }
 
 .stat-item {
@@ -104,10 +104,10 @@
 }
 
 .stat-number {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #A8D8C3;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .stat-label {
@@ -124,16 +124,8 @@
   
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 3rem;
     text-align: center;
-  }
-  
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-text p {
-    font-size: 1.1rem;
   }
   
   .hero-buttons {
@@ -143,25 +135,13 @@
   .hero-stats {
     flex-direction: row;
     justify-content: space-around;
-    padding: 32px 24px;
-  }
-  
-  .stat-number {
-    font-size: 2rem;
+    padding: 2rem 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  
   .hero-stats {
     flex-direction: column;
-    gap: 24px;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
+    gap: 1.5rem;
   }
 }
