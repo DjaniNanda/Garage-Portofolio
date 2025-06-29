@@ -1,55 +1,55 @@
 .about {
   background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+  position: relative;
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 64px;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .about-text h2 {
   color: #1C3E3A;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .about-intro {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #7D7D7D;
-  margin-bottom: 24px;
-  line-height: 1.6;
+  margin-bottom: 32px;
+  line-height: 1.7;
 }
 
 .about-story,
 .about-expertise {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .about-story h3,
 .about-expertise h3 {
   color: #1C3E3A;
-  margin-bottom: 12px;
-  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
 }
 
 .about-story p {
   color: #7D7D7D;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .about-expertise ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .about-expertise li {
   color: #7D7D7D;
-  padding: 6px 0;
+  padding: 8px 0;
   position: relative;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
 .about-expertise li::before {
@@ -62,20 +62,20 @@
 
 .about-image {
   position: relative;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(28, 62, 58, 0.15);
+  box-shadow: 0 20px 40px rgba(28, 62, 58, 0.15);
 }
 
 .about-image img {
   width: 100%;
-  height: 350px;
+  height: 400px;
   object-fit: cover;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .about-image:hover img {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 .image-overlay {
@@ -84,20 +84,20 @@
   left: 0;
   right: 0;
   background: linear-gradient(transparent, rgba(28, 62, 58, 0.9));
-  padding: 24px 20px 16px;
+  padding: 32px 24px 24px;
   color: white;
 }
 
 .overlay-content h4 {
   color: white;
   margin-bottom: 4px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .overlay-content p {
   color: #A8D8C3;
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .about-values {
@@ -106,64 +106,65 @@
 
 .values-title {
   color: #1C3E3A;
-  margin-bottom: 36px;
-  font-size: 1.8rem;
+  margin-bottom: 48px;
+  font-size: 2rem;
 }
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
 }
 
 .value-card {
   background: white;
-  padding: 24px 20px;
-  border-radius: 12px;
+  padding: 32px 24px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(168, 216, 195, 0.2);
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .value-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(28, 62, 58, 0.15);
 }
 
 .value-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: linear-gradient(135deg, #A8D8C3 0%, #1C3E3A 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
   color: white;
 }
 
 .value-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .value-card h4 {
   color: #1C3E3A;
-  margin-bottom: 8px;
-  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
 }
 
 .value-card p {
   color: #7D7D7D;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 48px;
+    gap: 48px;
+    margin-bottom: 64px;
   }
   
   .about-image {
@@ -171,15 +172,15 @@
   }
   
   .about-image img {
-    height: 250px;
+    height: 300px;
   }
   
   .values-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
   
   .values-title {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 }
