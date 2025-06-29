@@ -6,39 +6,39 @@
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2.5rem;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .about-text h2 {
   color: #1C3E3A;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .about-intro {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   color: #7D7D7D;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.7;
 }
 
 .about-story,
 .about-expertise {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .about-story h3,
 .about-expertise h3 {
   color: #1C3E3A;
-  margin-bottom: 1rem;
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  margin-bottom: 0.75rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
 .about-story p {
   color: #7D7D7D;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 .about-expertise ul {
@@ -48,10 +48,10 @@
 
 .about-expertise li {
   color: #7D7D7D;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   position: relative;
-  padding-left: 1.5rem;
-  font-size: 1rem;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
 }
 
 .about-expertise li::before {
@@ -64,20 +64,20 @@
 
 .about-image {
   position: relative;
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(28, 62, 58, 0.15);
+  box-shadow: 0 15px 30px rgba(28, 62, 58, 0.15);
 }
 
 .about-image img {
   width: 100%;
-  height: 400px;
+  height: 320px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .about-image:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .image-overlay {
@@ -86,20 +86,20 @@
   left: 0;
   right: 0;
   background: linear-gradient(transparent, rgba(28, 62, 58, 0.9));
-  padding: 2rem 1.5rem 1.5rem;
+  padding: 1.5rem 1rem 1rem;
   color: white;
 }
 
 .overlay-content h4 {
   color: white;
-  margin-bottom: 0.25rem;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 0.2rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .overlay-content p {
   color: #A8D8C3;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .about-values {
@@ -108,66 +108,66 @@
 
 .values-title {
   color: #1C3E3A;
-  margin-bottom: 3rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 2rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
 .value-card {
   background: white;
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(168, 216, 195, 0.2);
   transition: all 0.3s ease;
 }
 
 .value-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(28, 62, 58, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(28, 62, 58, 0.15);
 }
 
 .value-icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   background: linear-gradient(135deg, #A8D8C3 0%, #1C3E3A 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.25rem;
+  margin: 0 auto 1rem;
   color: white;
 }
 
 .value-icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .value-card h4 {
   color: #1C3E3A;
-  margin-bottom: 0.75rem;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 0.6rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
 }
 
 .value-card p {
   color: #7D7D7D;
   margin: 0;
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-bottom: 4rem;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
   }
   
   .about-image {
@@ -175,15 +175,15 @@
   }
   
   .about-image img {
-    height: 300px;
+    height: 250px;
   }
   
   .values-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
   
   .values-title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }

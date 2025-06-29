@@ -1,10 +1,10 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .hero-background {
@@ -36,7 +36,7 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2.5rem;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -49,53 +49,53 @@
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background: rgba(168, 216, 195, 0.2);
   border: 1px solid rgba(168, 216, 195, 0.3);
-  padding: 0.5rem 1rem;
-  border-radius: 1.5rem;
-  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   backdrop-filter: blur(10px);
 }
 
 .badge-icon {
-  width: 1rem;
-  height: 1rem;
+  width: 0.9rem;
+  height: 0.9rem;
   color: #A8D8C3;
 }
 
 .hero-text h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: white;
 }
 
 .hero-text p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
 .hero-stats {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1.5rem;
-  padding: 3rem 2rem;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
 }
 
 .stat-item {
@@ -104,27 +104,27 @@
 }
 
 .stat-number {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: #A8D8C3;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .stat-label {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
 }
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 80vh;
-    margin-top: 70px;
+    min-height: 70vh;
+    margin-top: 60px;
   }
   
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
     text-align: center;
   }
   
@@ -135,13 +135,13 @@
   .hero-stats {
     flex-direction: row;
     justify-content: space-around;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-stats {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }

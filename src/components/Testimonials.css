@@ -18,28 +18,28 @@
 
 .testimonials-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   position: relative;
   z-index: 1;
 }
 
 .testimonials-header h2 {
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .testimonials-header p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   color: #A8D8C3;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
   position: relative;
   z-index: 1;
 }
@@ -48,24 +48,24 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1.25rem;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
   position: relative;
   transition: all 0.3s ease;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial-quote {
   position: absolute;
-  top: -12px;
-  left: 2rem;
-  width: 3rem;
-  height: 3rem;
+  top: -10px;
+  left: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: #A8D8C3;
   border-radius: 50%;
   display: flex;
@@ -75,27 +75,27 @@
 }
 
 .testimonial-quote svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .testimonial-rating {
   display: flex;
-  gap: 0.25rem;
-  margin: 1rem 0 1.5rem;
+  gap: 0.2rem;
+  margin: 0.75rem 0 1rem;
 }
 
 .star-filled {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   color: #fbbf24;
   fill: currentColor;
 }
 
 .testimonial-text {
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.9);
   font-style: italic;
 }
@@ -108,18 +108,18 @@
 
 .author-info h4 {
   color: white;
-  margin-bottom: 0.25rem;
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-bottom: 0.2rem;
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
 }
 
 .author-vehicle {
   color: #A8D8C3;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .testimonial-date {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 .testimonials-cta {
@@ -130,28 +130,28 @@
 
 .testimonials-cta h3 {
   color: white;
-  margin-bottom: 1rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
 
 .testimonials-cta p {
   color: #A8D8C3;
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
-  margin-bottom: 2rem;
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
   }
   
   .testimonial-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .testimonials-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
