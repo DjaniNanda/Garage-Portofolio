@@ -10,6 +10,19 @@ const Hero: React.FC = () => {
     window.open(url, '_blank');
   };
 
+  const scrollToServices = () => {
+    const element = document.getElementById('services');
+    if (element) {
+      const headerHeight = 70; // Approximate header height
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="accueil" className="hero">
       <div className="hero-background">
@@ -49,10 +62,7 @@ const Hero: React.FC = () => {
                 Prendre rendez-vous
               </button>
               <button 
-                onClick={() => {
-                  const element = document.getElementById('services');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={scrollToServices}
                 className="btn btn-secondary"
                 aria-label="Voir nos services"
               >
