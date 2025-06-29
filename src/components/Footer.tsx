@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 70; // Approximate header height
+      const headerHeight = 60; 
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({
