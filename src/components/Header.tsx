@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 30; 
+      const headerHeight = 90; 
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({

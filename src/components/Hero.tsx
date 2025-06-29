@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   const scrollToServices = () => {
     const element = document.getElementById('services');
     if (element) {
-      const headerHeight = 30;
+      const headerHeight = 90;
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({
