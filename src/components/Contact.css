@@ -68,6 +68,7 @@
 .contact-details h3 {
   color: #1C3E3A;
   margin-bottom: 0.4rem;
+  margin-left: 0.5rem;
   font-size: clamp(0.95rem, 2vw, 1.05rem);
 }
 

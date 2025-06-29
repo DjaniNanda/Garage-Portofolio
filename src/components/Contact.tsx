@@ -70,14 +70,14 @@ const Contact: React.FC = () => {
               </div>
               </center>
               <div className="contact-details">
-                <h3>Téléphone</h3>
+                <h3>Téléphone 1</h3>
                 <p>+237 6 80 07 54 29</p>
                 <a href="tel:+237680075429" className="contact-link">
                   Appeler maintenant
                 </a>
               </div>
               <div className="contact-details">
-                <h3>Téléphone</h3>
+                <h3>Téléphone 2</h3>
                 <p>+237 6 75 38 17 22</p>
                 <a href="tel:+237675381722" className="contact-link">
                   Appeler maintenant
