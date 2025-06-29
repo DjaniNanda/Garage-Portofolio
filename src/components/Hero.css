@@ -131,12 +131,14 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
   }
+
   
   .hero-buttons {
     justify-content: center;
+    padding-bottom: 5rem;
   }
   
   .hero-stats {
