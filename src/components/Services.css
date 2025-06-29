@@ -1,16 +1,17 @@
 .services {
   background: linear-gradient(135deg, #1C3E3A 0%, #2a5a54 100%);
   position: relative;
+  padding: 6rem 0;
 }
 
 .services-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .services-header h2 {
   color: white;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .services-header p {
@@ -23,13 +24,13 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .service-card {
   background: white;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
   text-align: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(168, 216, 195, 0.2);
@@ -44,7 +45,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: linear-gradient(90deg, #1C3E3A 0%, #A8D8C3 100%);
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -55,19 +56,19 @@
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 15px 30px rgba(28, 62, 58, 0.15);
 }
 
 .service-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   background: linear-gradient(135deg, #1C3E3A 0%, #A8D8C3 100%);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 2rem;
   color: white;
   transition: transform 0.3s ease;
 }
@@ -77,19 +78,19 @@
 }
 
 .service-icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .service-card h3 {
   color: #1C3E3A;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .service-card p {
   color: #7D7D7D;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   line-height: 1.6;
   font-size: 0.85rem;
 }
@@ -103,9 +104,9 @@
 .service-features li {
   background: #f0f9f5;
   color: #1C3E3A;
-  padding: 0.4rem 0.75rem;
-  margin: 0.4rem 0;
-  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  border-radius: 1.5rem;
   font-size: 0.8rem;
   font-weight: 500;
   position: relative;
@@ -115,20 +116,24 @@
   content: '✓';
   color: #A8D8C3;
   font-weight: bold;
-  margin-right: 0.4rem;
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {
+  .services {
+    padding: 4rem 0;
+  }
+  
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 2rem;
   }
   
   .service-card {
-    padding: 1.25rem;
+    padding: 2rem 1.5rem;
   }
   
   .services-header {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 }
