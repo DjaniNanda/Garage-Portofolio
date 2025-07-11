@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="contact-item">
                 <Mail />
-                <span>contact@exactautomobile.cm</span>
+                <a href="mailto:exactautomobile@yahoo.com">exactautomobile@yahoo.com</a>
               </div>
               <div className="contact-item">
                 <Clock />
