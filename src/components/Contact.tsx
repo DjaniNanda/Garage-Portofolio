@@ -34,6 +34,7 @@ const Contact: React.FC = () => {
               <div className="contact-details">
                 <h3>Notre Adresse</h3>
                 <p>Terminus Mimboman<br />Yaoundé, Cameroun</p>
+                <p><strong>Boîte postale :</strong> 11341 Yaoundé</p>
                 <button onClick={openGoogleMaps} className="contact-link">
                   Voir sur Google Maps
                 </button>
@@ -65,9 +66,9 @@ const Contact: React.FC = () => {
             
             <div className="contact-card">
               <center>
-              <div className="contact-icon">
-                <Phone />
-              </div>
+                <div className="contact-icon">
+                  <Phone />
+                </div>
               </center>
               <div className="contact-details">
                 <h3>Téléphone 1</h3>
@@ -91,8 +92,8 @@ const Contact: React.FC = () => {
               </div>
               <div className="contact-details">
                 <h3>Email</h3>
-                <p>contact@exactautomobile.cm</p>
-                <a href="mailto:contact@exactautomobile.cm" className="contact-link">
+                <p>exactautomobile@yahoo.com</p>
+                <a href="mailto:exactautomobile@yahoo.com" className="contact-link">
                   Envoyer un email
                 </a>
               </div>
