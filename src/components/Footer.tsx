@@ -90,6 +90,7 @@ const Footer: React.FC = () => {
               <div className="contact-item">
                 <MapPin />
                 <span>Terminus Mimboman<br />Yaoundé, Cameroun</span>
+                <span><strong>Boîte postale :</strong> 11341 Yaoundé</span>
               </div>
               <div className="contact-item">
                 <Phone />
