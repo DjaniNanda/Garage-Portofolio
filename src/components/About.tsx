@@ -1,39 +1,39 @@
 import React from 'react';
 import { Users, Award, Clock, Heart } from 'lucide-react';
-import ImageSlider from './ImageSlider';
+import StylishSlider from './StylishSlider';
 import './About.css';
 
 const About: React.FC = () => {
   const sliderImages = [
     {
-      image: "/495177214_1241509317979575_6219899708439107088_n.jpg",
-      title: "Notre Équipe Experte",
-      description: "Plus de 20 mécaniciens qualifiés à votre service",
-      alt: "Équipe de mécaniciens experts d'Exact Automobile à Yaoundé"
+      image: "/team-photo.jpg",
+      title: "Notre Équipe Professionnelle",
+      description: "Plus de 20 mécaniciens experts formés aux dernières technologies automobiles",
+      alt: "Photo d'équipe des mécaniciens d'Exact Automobile en uniforme professionnel"
     },
     {
-      image: "/IMG-20250625-WA0009.jpg",
-      title: "Atelier Moderne",
-      description: "Installations équipées des dernières technologies",
-      alt: "Atelier moderne d'Exact Automobile avec véhicules en réparation"
+      image: "/garage-exterior.jpg",
+      title: "Garage Moderne à Yaoundé",
+      description: "Installations spacieuses et bien équipées à Terminus Mimboman",
+      alt: "Vue extérieure du garage Exact Automobile avec véhicules de luxe"
     },
     {
-      image: "/IMG-20250625-WA0015.jpg",
-      title: "Service de Qualité",
-      description: "Diagnostic et réparation professionnels",
-      alt: "Service de réparation automobile professionnel chez Exact Automobile"
+      image: "/service-area.jpg",
+      title: "Zone de Service Premium",
+      description: "Espace dédié à l'accueil et au service clientèle de qualité",
+      alt: "Zone de service avec véhicules haut de gamme en cours de réparation"
     },
     {
-      image: "/IMG-20250627-WA0040.jpg",
-      title: "Espace de Travail",
-      description: "Environnement organisé pour un service optimal",
-      alt: "Espace de travail organisé dans l'atelier Exact Automobile"
+      image: "/workshop-interior.jpg",
+      title: "Atelier Technique Avancé",
+      description: "Équipements de pointe pour tous types de réparations automobiles",
+      alt: "Intérieur de l'atelier avec équipements techniques modernes"
     },
     {
-      image: "/IMG-20250627-WA0044.jpg",
-      title: "Expertise Technique",
-      description: "Mécaniciens spécialisés en action",
-      alt: "Mécaniciens d'Exact Automobile travaillant sur un moteur"
+      image: "/mechanics-working.jpg",
+      title: "Expertise en Action",
+      description: "Nos mécaniciens qualifiés travaillent avec précision et professionnalisme",
+      alt: "Mécaniciens d'Exact Automobile en pleine réparation moteur"
     }
   ];
 
@@ -98,7 +98,7 @@ const About: React.FC = () => {
           </div>
           
           <div className="slide-in-right">
-            <ImageSlider slides={sliderImages} autoPlay={true} autoPlayInterval={5000} />
+            <StylishSlider slides={sliderImages} autoPlay={true} autoPlayInterval={6000} />
           </div>
         </div>
         
