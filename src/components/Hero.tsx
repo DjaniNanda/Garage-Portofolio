@@ -24,29 +24,12 @@ const Hero: React.FC = () => {
   };
 
   const youtubeUrl = "https://www.youtube.com/embed/3oGx-r6gr5k";
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handlePlay = () => {
-    setIsPlaying(true);
-  };
-
-  const handlePause = () => {
-    setIsPlaying(false);
-  };
-
-  const handlePlayButtonClick = () => {
-    if (videoRef.current) {
-      setIsPlaying(true);
-      videoRef.current.play();
-    }
-  };
 
   return (
     <section id="accueil" className="hero">
       <div className="hero-background">
         <img 
-          src="/1.jpg"
+          src="/5.jpg"
           alt="Exact Automobile - Garage moderne à Terminus Mimboman, Yaoundé"
           className="hero-image"
           loading="eager"
