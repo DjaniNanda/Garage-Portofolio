@@ -22,9 +22,10 @@ const Hero: React.FC = () => {
       });
     }
   };
+
   const youtubeUrl = "https://www.youtube.com/embed/3oGx-r6gr5k";
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null); 
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -33,7 +34,7 @@ const Hero: React.FC = () => {
   const handlePause = () => {
     setIsPlaying(false);
   };
-  
+
   const handlePlayButtonClick = () => {
     if (videoRef.current) {
       setIsPlaying(true);
@@ -45,8 +46,8 @@ const Hero: React.FC = () => {
     <section id="accueil" className="hero">
       <div className="hero-background">
         <img 
-          src="/1.jpg" 
-          alt="Exact Automobile - Garage moderne à Terminus Mimboman, Yaoundé" 
+          src="/1.jpg"
+          alt="Exact Automobile - Garage moderne à Terminus Mimboman, Yaoundé"
           className="hero-image"
           loading="eager"
           width="1920"
@@ -72,7 +73,7 @@ const Hero: React.FC = () => {
             
             <div className="hero-buttons">
               <button 
-                onClick={openWhatsApp} 
+                onClick={openWhatsApp}
                 className="btn btn-whatsapp"
                 aria-label="Prendre rendez-vous via WhatsApp"
               >
@@ -91,15 +92,12 @@ const Hero: React.FC = () => {
           
           <div className="video-container">
             <iframe
-              src={`${youtubeUrl}?autoplay=1&rel=0&modestbranding=1`}
+              src={`${youtubeUrl}?autoplay=0&rel=0&modestbranding=1`}
               title="Exact Automobile - Présentation"
-              height="278"
-              width="520"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
-            
           </div>
         </div>
       </div>
