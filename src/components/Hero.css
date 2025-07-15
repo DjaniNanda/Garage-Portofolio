@@ -36,12 +36,11 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10rem;
+  gap: 15rem;
   align-items: center;
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
