@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
     }
   };
 
-  const youtubeUrl = "https://www.youtube.com/embed/3oGx-r6gr5k";
+  const youtubeUrl = "https://www.youtube.com/embed/3oGx-r6gr5k?modestbranding=1&rel=0&showinfo=0";
 
   return (
     <section id="accueil" className="hero">
