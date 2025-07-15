@@ -1,135 +1,223 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import './ImageSlider.css';
+import { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import "./ImageSlider.css";
 
-interface SlideData {
+interface ImageData {
   image: string;
   title: string;
   description: string;
   alt: string;
 }
 
-interface ImageSliderProps {
-  slides: SlideData[];
-  autoPlay?: boolean;
-  autoPlayInterval?: number;
-}
+const ImageSlider: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+  const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
+  const [isPlaying, setIsPlaying] = useState<boolean>(true);
+  const [progress, setProgress] = useState<number>(0);
+  const progressRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-const ImageSlider: React.FC<ImageSliderProps> = ({ 
-  slides, 
-  autoPlay = true, 
-  autoPlayInterval = 5000 
-}) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
-
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }, [slides.length]);
-
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  }, [slides.length]);
-
-  const goToSlide = useCallback((index: number) => {
-    setCurrentSlide(index);
-  }, []);
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(nextSlide, autoPlayInterval);
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, nextSlide, autoPlayInterval]);
-
-  const handleMouseEnter = () => {
-    setIsAutoPlaying(false);
-  };
-
-  const handleMouseLeave = () => {
-    setIsAutoPlaying(autoPlay);
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'ArrowLeft') {
-      prevSlide();
-    } else if (event.key === 'ArrowRight') {
-      nextSlide();
+  const images: ImageData[] = [
+    {
+      image: "/2.jpg",
+      title: "Notre Équipe Experte",
+      description: "Des professionnels dévoués à votre service automobile",
+      alt: "Équipe de mécaniciens experts"
+    },
+    {
+      image: "/6.jpg",
+      title: "Atelier Moderne",
+      description: "Équipements de pointe pour un service de qualité",
+      alt: "Atelier moderne avec équipements"
+    },
+    {
+      image: "/1.jpg",
+      title: "Espace de Travail",
+      description: "Un environnement organisé pour votre tranquillité d'esprit",
+      alt: "Espace de travail organisé"
+    },
+    {
+      image: "/5.jpg",
+      title: "Service de Qualité",
+      description: "Excellence et précision dans chaque intervention",
+      alt: "Service de qualité automobile"
     }
+  ];
+
+  const totalImages = images.length;
+
+  // Progress bar animation - 2 seconds
+  useEffect(() => {
+    if (isPlaying && !isTransitioning) {
+      setProgress(0);
+      let startTime = Date.now();
+      
+      const updateProgress = () => {
+        const elapsed = Date.now() - startTime;
+        const newProgress = (elapsed / 2000) * 100;
+        
+        if (newProgress >= 100) {
+          setProgress(100);
+          handleNext();
+        } else {
+          setProgress(newProgress);
+          progressRef.current = setTimeout(updateProgress, 50);
+        }
+      };
+      
+      progressRef.current = setTimeout(updateProgress, 50);
+    }
+
+    return () => {
+      if (progressRef.current) {
+        clearTimeout(progressRef.current);
+      }
+    };
+  }, [currentIndex, isPlaying, isTransitioning]);
+
+  const handleNext = () => {
+    if (isTransitioning) return;
+    setDirection('forward');
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev + 1) % totalImages);
+    
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 800);
   };
+
+  const handlePrevious = () => {
+    if (isTransitioning) return;
+    setDirection('backward');
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev - 1 + totalImages) % totalImages);
+    
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 800);
+  };
+
+  const handleDotClick = (index: number) => {
+    if (isTransitioning || index === currentIndex) return;
+    
+    setDirection(index > currentIndex ? 'forward' : 'backward');
+    setIsTransitioning(true);
+    setCurrentIndex(index);
+    
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 800);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const currentImage = images[currentIndex];
 
   return (
-    <div 
-      className="image-slider"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onKeyDown={handleKeyDown}
-      tabIndex={0}
-      role="region"
-      aria-label="Galerie d'images Exact Automobile"
-    >
+    <div className="slider-wrapper">
       <div className="slider-container">
-        <div 
-          className="slider-track"
-          style={{ transform: `translateX(-${currentSlide * 20}%)` }}
+        {/* Left Navigation Button */}
+        <button
+          onClick={handlePrevious}
+          disabled={isTransitioning}
+          className={`nav-button nav-button-left ${isTransitioning ? 'disabled' : ''}`}
         >
-          {slides.map((slide, index) => (
-            <div key={index} className="slider-slide">
-              <img
-                src={slide.image}
-                alt={slide.alt}
-                loading={index === 0 ? "eager" : "lazy"}
-                width="600"
-                height="400"
-              />
-              <div className="slide-overlay">
-                <div className="overlay-content">
-                  <h4>{slide.title}</h4>
-                  <p>{slide.description}</p>
-                </div>
+          <ChevronLeft size={24} />
+        </button>
+
+        {/* Main Slider */}
+        <div className="modern-slider">
+          {/* Background Images Stack */}
+          <div className="slider-background">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`slide ${
+                  index === currentIndex ? 'active' : ''
+                } ${
+                  isTransitioning 
+                    ? direction === 'forward' 
+                      ? 'transitioning-forward' 
+                      : 'transitioning-backward'
+                    : ''
+                }`}
+                data-index={index}
+                data-current={currentIndex}
+              >
+                <img
+                  src={image.image}
+                  alt={image.alt}
+                  className={`slide-image ${
+                    isTransitioning && index === currentIndex ? 'zooming' : ''
+                  }`}
+                />
+                
+                {/* Gradient Overlay */}
+                <div className={`slide-overlay ${
+                  index === currentIndex ? 'active' : ''
+                }`} />
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="slider-controls prev">
-          <button
-            className="slider-btn"
-            onClick={prevSlide}
-            aria-label="Image précédente"
-            type="button"
-          >
-            <ChevronLeft />
-          </button>
-        </div>
+          {/* Content Overlay */}
+          <div className={`content-overlay ${isTransitioning ? 'transitioning' : ''}`}>
+            
+            <h1 className={`slide-title ${isTransitioning ? 'transitioning' : ''}`}>
+              {currentImage.title}
+            </h1>
+            
+            <p className={`slide-description ${isTransitioning ? 'transitioning' : ''}`}>
+              {currentImage.description}
+            </p>
+          </div>
 
-        <div className="slider-controls next">
-          <button
-            className="slider-btn"
-            onClick={nextSlide}
-            aria-label="Image suivante"
-            type="button"
-          >
-            <ChevronRight />
-          </button>
-        </div>
-
-        <div className="slider-indicators">
-          {slides.map((_, index) => (
+          {/* Top Controls */}
+          <div className="top-controls">
+            {/* Play/Pause Button */}
             <button
-              key={index}
-              className={`indicator ${index === currentSlide ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Aller à l'image ${index + 1}`}
-              type="button"
-            />
-          ))}
+              onClick={togglePlayPause}
+              className="play-pause-button"
+            >
+              {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+            </button>
+
+            {/* Progress Bar */}
+            <div className="progress-container">
+              <div 
+                className="progress-bar"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+          </div>
+
+          {/* Bottom Indicators */}
+          <div className="bottom-indicators">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                disabled={isTransitioning}
+                className={`indicator ${
+                  index === currentIndex ? 'active' : ''
+                } ${
+                  isTransitioning && index !== currentIndex ? 'disabled' : ''
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
-        <div 
-          className={`slider-progress ${isAutoPlaying ? 'auto-play' : ''}`}
-          style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
-        />
+        {/* Right Navigation Button */}
+        <button
+          onClick={handleNext}
+          disabled={isTransitioning}
+          className={`nav-button nav-button-right ${isTransitioning ? 'disabled' : ''}`}
+        >
+          <ChevronRight size={24} />
+        </button>
       </div>
     </div>
   );
