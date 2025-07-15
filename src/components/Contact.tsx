@@ -73,16 +73,10 @@ const Contact: React.FC = () => {
               <div className="contact-details">
                 <h3>Téléphone 1</h3>
                 <a href="tel:+237680075429">+237 6 80 07 54 29</a>
-                <a href="tel:+237680075429" className="contact-link">
-                  Appeler maintenant
-                </a>
               </div>
               <div className="contact-details">
                 <h3>Téléphone 2</h3>
                 <a href="tel:+237675381722">+237 6 75 38 17 22</a>
-                <a href="tel:+237675381722" className="contact-link">
-                  Appeler maintenant
-                </a>
               </div>
             </div>
             
@@ -93,9 +87,7 @@ const Contact: React.FC = () => {
               <div className="contact-details">
                 <h3>Email</h3>
                 <a href="mailto:exactautomobile@yahoo.com">exactautomobile@yahoo.com</a>
-                <a href="mailto:exactautomobile@yahoo.com" className="contact-link">
-                  Envoyer un email
-                </a>
+                
               </div>
             </div>
           </div>
