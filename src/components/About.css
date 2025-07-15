@@ -42,6 +42,7 @@
   font-family: bold;
   line-height: 1.6;
   font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.15rem)
 }
 
 .about-expertise ul {
