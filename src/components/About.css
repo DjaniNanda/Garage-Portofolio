@@ -14,6 +14,7 @@
 .about-text h2 {
   color: #1C3E3A;
   margin-bottom: 1rem;
+  font-family: bold;
 }
 
 .about-intro {
@@ -32,13 +33,15 @@
 .about-expertise h3 {
   color: #1C3E3A;
   margin-bottom: 0.75rem;
+  font-family: bold;
   font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
 .about-story p {
   color: #7D7D7D;
+  font-family: bold;
   line-height: 1.6;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
 }
 
 .about-expertise ul {
@@ -51,7 +54,7 @@
   padding: 0.4rem 0;
   position: relative;
   padding-left: 1.25rem;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
 }
 
 .about-expertise li::before {
