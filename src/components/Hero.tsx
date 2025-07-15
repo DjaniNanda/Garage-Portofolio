@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { MessageCircle, Star } from 'lucide-react';
 import './Hero.css';
 
@@ -23,11 +23,29 @@ const Hero: React.FC = () => {
     }
   };
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null); 
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+  };
+  
+  const handlePlayButtonClick = () => {
+    if (videoRef.current) {
+      setIsPlaying(true);
+      videoRef.current.play();
+    }
+  };
+
   return (
     <section id="accueil" className="hero">
       <div className="hero-background">
         <img 
-          src="/IMG-20250625-WA0010.jpg" 
+          src="/1.jpg" 
           alt="Exact Automobile - Garage moderne à Terminus Mimboman, Yaoundé" 
           className="hero-image"
           loading="eager"
@@ -63,7 +81,7 @@ const Hero: React.FC = () => {
               </button>
               <button 
                 onClick={scrollToServices}
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 aria-label="Voir nos services"
               >
                 Nos services
@@ -71,19 +89,28 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="hero-stats slide-in-right">
-            <div className="stat-item">
-              <div className="stat-number">1000+</div>
-              <div className="stat-label">Véhicules réparés</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">20+</div>
-              <div className="stat-label">Mécaniciens experts</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Satisfaction client</div>
-            </div>
+          <div className="video-container">
+            <video 
+              ref={videoRef} 
+              controls 
+              poster="/thumbnail.JPG"
+              onPlay={handlePlay}
+              onPause={handlePause}
+            >
+              <source src="/video.mp4" type="video/mp4" />
+            </video>
+            
+            
+            {!isPlaying && (
+              <div className="play-button-overlay">
+                <button 
+                  className="play-btn"
+                  onClick={handlePlayButtonClick} 
+                >
+                  ▶
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
