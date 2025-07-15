@@ -15,7 +15,7 @@
 
 .services-header p {
   font-size: clamp(0.9rem, 2vw, 1rem);
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -137,13 +137,13 @@
 }
 
 .service-card h3 {
-  color: #dededf;
+  color: white;
   margin-bottom: 0.75rem;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .service-card p {
-  color: #b8b4b4;
+  color: white;
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 0.85rem;
