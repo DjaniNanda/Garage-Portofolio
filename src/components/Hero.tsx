@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
     }
   };
 
-  const youtubeUrl = "https://www.youtube-nocookie.com/embed/3oGx-r6gr5k";
+  const youtubeUrl = "https://www.youtube.com/embed/3oGx-r6gr5k";
 
   return (
     <section id="accueil" className="hero">
@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
           
           <div className="video-container">
             <iframe
-              src={`${youtubeUrl}?modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1"`}
+              src={`${youtubeUrl}`}
               title="Exact Automobile - Présentation"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
