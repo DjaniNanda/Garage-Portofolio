@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       });
     }
   };
-
+  const youtubeUrl = "https://www.youtube.com/embed/3oGx-r6gr5k";
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null); 
 
@@ -90,27 +90,16 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="video-container">
-            <video 
-              ref={videoRef} 
-              controls 
-              poster="/thumbnail.JPG"
-              onPlay={handlePlay}
-              onPause={handlePause}
-            >
-              <source src="/video.mp4" type="video/mp4" />
-            </video>
+            <iframe
+              src={`${youtubeUrl}?autoplay=1&rel=0&modestbranding=1`}
+              title="Exact Automobile - Présentation"
+              height="189"
+              width="350"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
             
-            
-            {!isPlaying && (
-              <div className="play-button-overlay">
-                <button 
-                  className="play-btn"
-                  onClick={handlePlayButtonClick} 
-                >
-                  ▶
-                </button>
-              </div>
-            )}
           </div>
         </div>
       </div>
