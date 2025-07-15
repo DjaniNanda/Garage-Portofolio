@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
     <section id="accueil" className="hero">
       <div className="hero-background">
         <img 
-          src="/5.jpg"
+          src="/1.jpg"
           alt="Exact Automobile - Garage moderne à Terminus Mimboman, Yaoundé"
           className="hero-image"
           loading="eager"
