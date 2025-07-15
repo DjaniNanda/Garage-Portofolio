@@ -93,8 +93,8 @@ const Hero: React.FC = () => {
             <iframe
               src={`${youtubeUrl}?autoplay=1&rel=0&modestbranding=1`}
               title="Exact Automobile - Présentation"
-              height="189"
-              width="350"
+              height="290"
+              width="520"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
