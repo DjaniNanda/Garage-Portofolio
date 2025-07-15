@@ -31,7 +31,7 @@
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(168, 216, 195, 0.2);
+  border: 1px solid ;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -39,8 +39,8 @@
 
 .service-card:nth-child(1) {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.4), 
-    rgba(0, 0, 0, 0.4)
+    rgba(0, 0, 0, 0.55), 
+    rgba(0, 0, 0, 0.55)
   ), url('./ryo-kawasaki-cCA-kz1SKzc-unsplash.jpg');
   background-size: cover;
   background-position: center;
@@ -49,8 +49,8 @@
 
 .service-card:nth-child(2) {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.4), 
-    rgba(0, 0, 0, 0.4)
+    rgba(0, 0, 0, 0.55), 
+    rgba(0, 0, 0, 0.55)
   ), url('./Regular vehicle maintenance is crucial for keeping….jpeg');
   background-size: cover;
   background-position: center;
@@ -58,8 +58,8 @@
 }
 .service-card:nth-child(3) {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.4), 
-    rgba(0, 0, 0, 0.4)
+    rgba(0, 0, 0, 0.55), 
+    rgba(0, 0, 0, 0.55)
   ), url('./9bc6e3ab-d082-43b5-872e-6da3d084c398.jpeg');
   background-size: cover;
   background-position: center;
@@ -67,14 +67,31 @@
 }
 .service-card:nth-child(4) {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.4), 
-    rgba(0, 0, 0, 0.4)
+    rgba(0, 0, 0, 0.55), 
+    rgba(0, 0, 0, 0.55)
   ), url('./da53dba2-3d44-44f9-84db-51dddb3c3126.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.service-card:nth-child(5) {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55), 
+    rgba(0, 0, 0, 0.55)
+  ), url('./Read our ultimate guide to find the best tires for….jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-card:nth-child(6) {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55), 
+    rgba(0, 0, 0, 0.55)
+  ), url('./ChatGPT Image Jul 15, 2025, 10_59_38 AM.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .service-card::before {
   content: '';
@@ -120,13 +137,13 @@
 }
 
 .service-card h3 {
-  color: #1C3E3A;
+  color: #dededf;
   margin-bottom: 0.75rem;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .service-card p {
-  color: #7D7D7D;
+  color: #b8b4b4;
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 0.85rem;
