@@ -19,7 +19,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  aspect-ratio: 3/2; /* Adjust this ratio based on your images */
+  aspect-ratio: 16/9; /* Adjust this ratio based on your images */
   /* Remove fixed height */
   border-radius: 1.5rem;
   overflow: hidden;
@@ -315,6 +315,7 @@
   }
   
   .modern-slider {
+    aspect-ratio: 16/9;
     border-radius: 1rem;
   }
   
