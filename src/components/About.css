@@ -88,7 +88,6 @@
   border-radius: 0.75rem;
   text-align: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(161, 218, 193, 0.2);
   transition: all 0.3s ease;
 }
 
