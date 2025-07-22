@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://exactautomobile.cm/sitemap.xml
+Sitemap: https://exactautomobile.com/sitemap.xml
 
 # Optimisation pour les moteurs de recherche
 Crawl-delay: 1

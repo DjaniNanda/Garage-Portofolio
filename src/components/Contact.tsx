@@ -95,16 +95,17 @@ const Contact: React.FC = () => {
           <div className="contact-map slide-in-right">
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.0!2d11.5!3d3.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf1a1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2sYaound%C3%A9%2C%20Cameroon!5e0!3m2!1sen!2sus!4v1635959851123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.821956234403!2d11.550219314753374!3d3.848902997143132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf013c1602e9%3A0x8b10b3cfbbcfaa9e!2sTerminus%20Mimboman%2C%20Yaound%C3%A9%2C%20Cameroon!5e0!3m2!1sen!2sus!4v1721300000000!5m2!1sen!2sus"
                 width="100%"
                 height="400"
                 style={{ border: 0, borderRadius: '16px' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation Exact Automobile Yaoundé"
+                title="Localisation Terminus Mimboman Yaoundé"
               ></iframe>
             </div>
+
             
             <div className="whatsapp-cta">
               <h3>Réservation rapide</h3>
