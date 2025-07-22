@@ -295,10 +295,6 @@
     gap: 1rem;
   }
   
-  .modern-slider {
-    height: 20rem;
-  }
-  
   .slide-title {
     font-size: 1.875rem;
   }
@@ -319,7 +315,6 @@
   }
   
   .modern-slider {
-    height: 16rem;
     border-radius: 1rem;
   }
   
@@ -378,7 +373,7 @@
   }
   
   .modern-slider {
-    height: 14rem;
+    aspect-ratio: 4/3;
     border-radius: 0.75rem;
   }
   
