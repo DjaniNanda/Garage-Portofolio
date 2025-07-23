@@ -529,8 +529,13 @@
   .hero-content {
     padding: 1rem 0.5rem;
   }
+
+  .hero-title{
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+
   .hero-description{
-    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+    font-size: clamp(0.7rem, 1.8vw, 1rem);
   }
   
   .video-container.enhanced {
