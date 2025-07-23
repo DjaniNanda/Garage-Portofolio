@@ -156,10 +156,6 @@ const Hero: React.FC = () => {
                     </div>
                     <div className="play-button-ping"></div>
                   </div>
-                  <div className="video-info">
-                    <h3>Découvrez notre garage</h3>
-                    <p>Visite complète de nos installations</p>
-                  </div>
                 </div>
               ) : (
                 <iframe
