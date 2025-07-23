@@ -529,6 +529,9 @@
   .hero-content {
     padding: 1rem 0.5rem;
   }
+  .hero-description{
+    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  }
   
   .video-container.enhanced {
     border-radius: 1rem;
