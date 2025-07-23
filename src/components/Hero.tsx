@@ -7,7 +7,6 @@ const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger animations on mount
     setTimeout(() => setIsVisible(true), 100);
   }, []);
 
