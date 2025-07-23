@@ -164,6 +164,12 @@
   }
 }
 
+@media (max-width: 380px){
+  .hero{
+    margin-top: auto;
+  }
+}
+
 @media (max-width: 768px) and (orientation: landscape) {
   .hero {
     min-height: 100vh;
