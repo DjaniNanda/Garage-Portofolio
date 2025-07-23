@@ -130,9 +130,9 @@
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem; /* Reduced from 4rem for better spacing */
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .hero-text {
@@ -141,11 +141,11 @@
 
   .video-container {
     order: 2;
-    max-width: 100%;
-    width: 100%;
-    border-radius: 30px;
-    /* Ensure proper aspect ratio on mobile */
+    max-width: 280px; /* Fixed size for consistency */
+    width: 280px; /* Fixed width instead of 100% */
+    border-radius: 25px; /* Adjusted border radius */
     aspect-ratio: 16/9;
+    margin: 0 auto; /* Center the video */
   }
 
   .hero-buttons {
@@ -153,15 +153,39 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Specific iPhone XR adjustments (414px width) */
+@media (max-width: 414px) and (min-width: 375px) {
+  .hero-content {
+    padding: 1.5rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .video-container {
+    max-width: 260px; /* Smaller on XR to match iPhone X appearance */
+    width: 260px;
+    border-radius: 22px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* iPhone X and similar (375px width) */
+@media (max-width: 375px) {
   .hero {
     min-height: 100vh;
-    margin-top: 10px;
+    margin-top: 40px;
   }
 
   .hero-content {
     padding: 1rem 0.75rem;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .hero-text h1 {
@@ -173,15 +197,14 @@
   }
 
   .video-container {
-    max-width: 100%;
-    width: 100%;
+    max-width: 260px;
+    width: 260px;
     border-radius: 20px;
-    /* Maintain aspect ratio on smaller screens */
     aspect-ratio: 16/9;
   }
 
   .hero-buttons {
-    gap: 0.5rem;
+    gap: 0.8rem;
   }
 
   .hero-badge {
@@ -196,11 +219,9 @@
   }
 
   .video-container {
-    max-width: 100%;
-    width: 100%;
-    border-radius: 15px;
-    /* Ensure thumbnail is fully visible on very small screens */
-    aspect-ratio: 16/9;
+    max-width: 240px;
+    width: 240px;
+    border-radius: 18px;
   }
 }
 
@@ -222,8 +243,8 @@
 
   .video-container {
     order: 2;
-    max-width: 300px;
-    width: 100%;
+    max-width: 250px;
+    width: 250px;
     aspect-ratio: 16/9;
   }
 
