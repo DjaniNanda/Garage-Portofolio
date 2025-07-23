@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: 50px;
 }
 
 .hero-background {
@@ -125,7 +124,6 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 100vh;
-    margin-top: 50px;
   }
 
   .hero-content {
@@ -169,11 +167,11 @@
   }
 
   .hero-buttons {
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
 
   .hero-badge {
-    font-size: 0.75rem;
+    font-size: 1.75rem;
     padding: 0.3rem 0.6rem;
   }
 }
