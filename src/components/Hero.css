@@ -142,7 +142,6 @@
     max-width: 100%;
     width: 100%;
     border-radius: 30px;
-    /* Ensure proper aspect ratio on mobile */
     aspect-ratio: 16/9;
   }
 
@@ -151,32 +150,8 @@
   }
 }
 
+
 @media (max-width: 480px) {
-
-  .hero-content {
-    padding: 1rem 0.75rem;
-    gap: 3rem;
-  }
-
-
-  .video-container {
-    max-width: 100%;
-    width: 100%;
-    border-radius: 20px;
-    aspect-ratio: 16/9;
-  }
-
-  .hero-buttons {
-    gap: 1.5rem;
-  }
-
-  .hero-badge {
-    font-size: 1.75rem;
-    padding: 0.3rem 0.6rem;
-  }
-}
-
-@media (max-width: 360px) {
   .hero-content {
     padding: 1rem 0.5rem;
   }
