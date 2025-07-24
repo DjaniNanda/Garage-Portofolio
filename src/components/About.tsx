@@ -28,7 +28,6 @@ const About: React.FC = () => {
             </div>
             
             <h2 className="main-title">
-              Exact Automobile
               <span className="title-highlight">Votre Expert Auto</span>
             </h2>
             
