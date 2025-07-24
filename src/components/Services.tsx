@@ -3,6 +3,13 @@ import { Wrench, Car, Gauge, Zap, Settings, Shield, ArrowRight, CheckCircle, Sta
 import './Services.css';
 
 const Services: React.FC = () => {
+  const openWhatsApp = () => {
+    const phoneNumber = "+237680075429"; 
+    const message = "Bonjour, je souhaiterais prendre rendez-vous pour mon véhicule chez Exact Automobile.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   const services = [
     {
       icon: <Wrench />,
@@ -11,7 +18,7 @@ const Services: React.FC = () => {
       features: ["Diagnostic électronique", "Réparation complexe", "Toutes marques"],
       price: "À partir de 150€",
       rating: 4.9,
-      image: "/7.jpg" // Add your image path
+      image: "/12.jpg" // Add your image path
     },
     {
       icon: <Car />,
@@ -20,7 +27,7 @@ const Services: React.FC = () => {
       features: ["Vidange huile moteur", "Changement filtres", "Révision périodique"],
       price: "À partir de 80€",
       rating: 4.8,
-      image: "/images/car-maintenance.jpg"
+      image: "/11.jpeg"
     },
     {
       icon: <Gauge />,
@@ -29,7 +36,7 @@ const Services: React.FC = () => {
       features: ["Valise diagnostic", "Lecture codes erreur", "Rapport détaillé"],
       price: "À partir de 50€",
       rating: 4.9,
-      image: "/images/diagnostic.jpg"
+      image: "/7.jpg"
     },
     {
       icon: <Shield />,
@@ -38,7 +45,7 @@ const Services: React.FC = () => {
       features: ["Plaquettes de frein", "Disques de frein", "Liquide de frein"],
       price: "À partir de 120€",
       rating: 4.7,
-      image: "/images/brakes.jpg"
+      image: "/9.jpeg"
     },
     {
       icon: <Settings />,
@@ -47,7 +54,7 @@ const Services: React.FC = () => {
       features: ["Montage pneus", "Équilibrage roues", "Géométrie train avant"],
       price: "À partir de 40€",
       rating: 4.8,
-      image: "/images/tires.jpg"
+      image: "/10.jpeg"
     },
     {
       icon: <Zap />,
@@ -56,7 +63,7 @@ const Services: React.FC = () => {
       features: ["Recharge gaz R134a", "Diagnostic panne", "Nettoyage circuit"],
       price: "À partir de 90€",
       rating: 4.6,
-      image: "/images/air-conditioning.jpg"
+      image: "/8.png"
     }
   ];
 
@@ -127,7 +134,7 @@ const Services: React.FC = () => {
           <div className="cta-content">
             <h3>Besoin d'un devis personnalisé ?</h3>
             <p>Contactez-nous dès aujourd'hui pour obtenir un diagnostic gratuit et un devis adapté à vos besoins.</p>
-            <button className="cta-button">
+            <button onClick={openWhatsApp} className="cta-button">
               Demander un devis
             </button>
           </div>
