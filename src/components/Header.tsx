@@ -36,7 +36,7 @@ const Header: React.FC = () => {
         <div className="header-content">
           <div className="logo">
             <img 
-              src="/images.jfif" 
+              src="/images.JPG" 
               alt="Exact Automobile Logo - Garage Yaoundé" 
               className="logo-image"
               width="40"
