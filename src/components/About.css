@@ -342,10 +342,9 @@
   }
 }
 
-/* Mobile optimizations pour s'adapter au nouveau slider */
 @media (max-width: 480px) {
   .image-container {
-    height: 22rem; /* Ajusté pour correspondre au slider de 20rem + marges */
+    height: 22rem;
     width: 100%;
     max-width: none;
   }
