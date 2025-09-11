@@ -500,9 +500,20 @@
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.5rem;
   }
 
+  .hero-badge{
+  font-size: 0.85rem;
+  }
+
+  .hero-title{
+  font-size: clamp(1.9rem, 3.8vw, 2.1rem);
+  }
+
+  .hero-description{
+    font-size: clamp(1rem, 2.1vw, 1.3rem);
+  }
   
   .video-container.enhanced {
     border-radius: 1rem;
