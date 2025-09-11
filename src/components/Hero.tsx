@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
               </button>
               <button 
                 onClick={scrollToServices}
-                className="btn btn-secondary"
+                className="btn btn-service"
                 aria-label="Voir nos services"
               >
                 <span>Nos services</span>
