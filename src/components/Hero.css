@@ -513,6 +513,7 @@
 
   .hero-description{
     font-size: clamp(1rem, 2.1vw, 1.3rem);
+    line-height: 2;
   }
   
   .video-container.enhanced {
