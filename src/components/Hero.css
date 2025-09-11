@@ -202,9 +202,13 @@
   background: linear-gradient(135deg, #16a34a 0%, #059669 100%);
 }
 
+.btn-service {
+  background: linear-gradient(135deg, #1f1f1f 100%);
+  color: rgb(226, 229, 231);
+  backdrop-filter: blur(20px);
+}
 
-
-.btn-secondary:hover {
+.btn-service:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
 }
