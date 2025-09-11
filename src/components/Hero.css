@@ -39,29 +39,6 @@
   z-index: 1;
 }
 
-/* Animated particles */
-.particles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: rgba(16, 185, 129, 0.4);
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) scale(0.8); opacity: 0.3; }
-  50% { transform: translateY(-20px) scale(1); opacity: 0.8; }
-}
-
 /* Content layout */
 .hero-content {
   display: grid;
@@ -226,7 +203,7 @@
 }
 
 .btn-secondary {
-  background: linear-gradient(135deg, #2e2e2e 100%);
+  background: linear-gradient(135deg, #4d4c4c 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
 }
