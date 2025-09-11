@@ -51,17 +51,6 @@ const Hero: React.FC = () => {
         <div className="hero-overlay"></div>
       </div>
 
-      {/* Animated particles */}
-      <div className="particles">
-        {[...Array(15)].map((_, i) => (
-          <div key={i} className="particle" style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 3}s`,
-            animationDuration: `${2 + Math.random() * 3}s`
-          }} />
-        ))}
-      </div>
       
       <div className="container">
         <div className="hero-content">
