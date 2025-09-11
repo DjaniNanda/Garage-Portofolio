@@ -500,8 +500,9 @@
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 1rem;
   }
+
   
   .video-container.enhanced {
     border-radius: 1rem;
