@@ -39,8 +39,8 @@
 
 /* Enhanced Logo Image Styling */
 .logo-image {
-  width: 4rem;
-  height: 4rem;
+  width: 3.7rem;
+  height: 3.7rem;
   object-fit: contain;
   border-radius: 50%; /* Makes it circular */
   transition: all 0.3s ease;
