@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <div className="footer-logo">
               <img 
-                src="/images.jfif" 
+                src="/favicon.svg" 
                 alt="Exact Automobile Logo" 
                 className="footer-logo-image"
               />
