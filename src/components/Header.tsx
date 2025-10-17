@@ -39,8 +39,8 @@ const Header: React.FC = () => {
               src="/android-chrome-192x192.png" 
               alt="Exact Automobile Logo - Garage Yaoundé" 
               className="logo-image"
-              width="40"
-              height="40"
+              width="60"
+              height="60"
             />
             <span className="logo-text">Exact Automobile</span>
           </div>
