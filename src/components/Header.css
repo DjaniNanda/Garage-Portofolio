@@ -29,13 +29,37 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+/* Enhanced Logo Image Styling */
 .logo-image {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   object-fit: contain;
-  border-radius: 0.4rem;
+  border-radius: 50%; /* Makes it circular */
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(168, 216, 195, 0.3));
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem;
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 4px 12px rgba(168, 216, 195, 0.5));
+}
+
+/* Logo wrapper for better control */
+.logo-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .nav {
@@ -88,6 +112,14 @@
   height: 1.25rem;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .logo-image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .nav {
     position: absolute;
@@ -123,4 +155,35 @@
   .mobile-menu-toggle {
     display: block;
   }
+  
+  .logo-image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .logo-image {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* Optional: Add pulsing effect to logo */
+@keyframes subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.logo-image:hover {
+  animation: subtle-pulse 2s ease-in-out infinite;
 }
