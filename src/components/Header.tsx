@@ -36,7 +36,7 @@ const Header: React.FC = () => {
         <div className="header-content">
           <div className="logo">
             <img 
-              src="/favicon.ico" 
+              src="/android-chrome-192x192.png" 
               alt="Exact Automobile Logo - Garage Yaoundé" 
               className="logo-image"
               width="40"
