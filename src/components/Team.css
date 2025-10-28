@@ -1,4 +1,4 @@
-/* Enhanced Team Section - TAILLES RÉDUITES */
+/* Enhanced Team Section  */
 .team-section {
   background: linear-gradient(135deg, #f8fffe 0%, #ffffff 50%, #f5fdfb 100%);
   padding: 4rem 0;
@@ -131,7 +131,7 @@
 }
 
 .team-title {
-  color: #1C3E3A;
+  color: #1f4440;
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   margin-bottom: 1rem;
@@ -343,6 +343,7 @@
 .overlay-title {
   font-size: 1.1rem;
   font-weight: 700;
+  color: #1f4440;
   margin-bottom: 0.4rem;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -350,6 +351,7 @@
 .overlay-subtitle {
   font-size: 0.85rem;
   opacity: 0.95;
+  color: rgb(156, 156, 156);
   line-height: 1.4;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
