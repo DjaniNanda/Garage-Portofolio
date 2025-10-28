@@ -371,7 +371,6 @@
 .overlay-decorator {
   width: 50px;
   height: 4px;
-  background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.3));
   margin-top: 1.25rem;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
