@@ -43,13 +43,13 @@ const Team: React.FC = () => {
         }
         return prev + 0.5;
       });
-    }, 25); // Update every 25ms for smooth progress
+    }, 25); 
 
     const slideInterval = setInterval(() => {
       setDirection('next');
       setCurrentSlide((prev) => (prev + 1) % teamImages.length);
       setProgress(0);
-    }, 5000);
+    }, 7000);
 
     return () => {
       clearInterval(progressInterval);
