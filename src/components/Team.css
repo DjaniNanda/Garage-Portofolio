@@ -1,7 +1,7 @@
-/* Enhanced Team Section */
+/* Enhanced Team Section - TAILLES RÉDUITES */
 .team-section {
   background: linear-gradient(135deg, #f8fffe 0%, #ffffff 50%, #f5fdfb 100%);
-  padding: 6rem 0;
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -26,24 +26,24 @@
 }
 
 .team-decoration-circle-1 {
-  width: 400px;
-  height: 400px;
-  top: -200px;
-  left: -200px;
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
   animation-delay: 0s;
 }
 
 .team-decoration-circle-2 {
-  width: 300px;
-  height: 300px;
-  bottom: -150px;
-  right: -150px;
+  width: 250px;
+  height: 250px;
+  bottom: -125px;
+  right: -125px;
   animation-delay: 4s;
 }
 
 .team-decoration-circle-3 {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   top: 50%;
   right: 10%;
   animation-delay: 8s;
@@ -71,28 +71,28 @@
   z-index: 2;
 }
 
-/* Enhanced Header */
+/* Enhanced Header - RÉDUIT */
 .team-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   animation: fadeInUp 0.8s ease-out;
 }
 
 .team-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(168, 216, 195, 0.2));
   border: 2px solid transparent;
   background-clip: padding-box;
-  padding: 0.875rem 1.75rem;
+  padding: 0.5rem 1rem;
   border-radius: 50px;
   color: #1C3E3A;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 25px rgba(28, 62, 58, 0.12), 
+  box-shadow: 0 4px 15px rgba(28, 62, 58, 0.12), 
               inset 0 1px 0 rgba(255, 255, 255, 0.8);
   position: relative;
   overflow: hidden;
@@ -119,8 +119,8 @@
 }
 
 .team-badge-icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   color: #1C3E3A;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -132,9 +132,9 @@
 
 .team-title {
   color: #1C3E3A;
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
 }
 
@@ -154,21 +154,21 @@
 
 .team-subtitle {
   color: #666;
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  line-height: 1.7;
-  max-width: 650px;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  line-height: 1.6;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-/* Team Content */
+/* Team Content - RÉDUIT */
 .team-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.5rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
-/* Enhanced Team Slider */
+/* Enhanced Team Slider - RÉDUIT */
 .team-image-container {
   position: relative;
   animation: slideInLeft 0.8s ease-out 0.2s both;
@@ -182,19 +182,19 @@
 
 .team-image-wrapper {
   position: relative;
-  border-radius: 2rem;
+  border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2),
-              0 10px 20px rgba(0, 0, 0, 0.1);
-  min-height: 550px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15),
+              0 8px 16px rgba(0, 0, 0, 0.1);
+  min-height: 380px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: #f5f5f5;
 }
 
 .team-image-wrapper:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25),
-              0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2),
+              0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .team-slide {
@@ -263,7 +263,7 @@
 }
 
 .team-image-wrapper:hover .team-image {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 /* Gradient overlay */
@@ -287,13 +287,13 @@
   opacity: 0.95;
 }
 
-/* Enhanced Image overlay */
+/* Enhanced Image overlay - RÉDUIT */
 .team-image-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2.5rem;
+  padding: 1.5rem;
   color: white;
   transform: translateY(20px);
   opacity: 0;
@@ -318,59 +318,59 @@
 }
 
 .overlay-icon-wrapper {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
 .overlay-icon {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
   color: white;
 }
 
 .overlay-title {
-  font-size: 1.75rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.4rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .overlay-subtitle {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   opacity: 0.95;
-  line-height: 1.5;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  line-height: 1.4;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .overlay-decorator {
-  width: 60px;
-  height: 4px;
+  width: 40px;
+  height: 3px;
   background: linear-gradient(90deg, white, transparent);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   border-radius: 2px;
 }
 
-/* Enhanced Navigation Buttons */
+/* Enhanced Navigation Buttons - RÉDUIT */
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.95);
   border: none;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -378,14 +378,14 @@
   cursor: pointer;
   z-index: 10;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
 .slider-btn:hover {
   background: white;
   transform: translateY(-50%) scale(1.15);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .slider-btn:active {
@@ -393,8 +393,8 @@
 }
 
 .slider-btn svg {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
   color: #1C3E3A;
   position: relative;
   z-index: 2;
@@ -427,38 +427,38 @@
 }
 
 .slider-btn-prev {
-  left: 1.25rem;
+  left: 0.75rem;
 }
 
 .slider-btn-next {
-  right: 1.25rem;
+  right: 0.75rem;
 }
 
-/* Enhanced Slider Controls */
+/* Enhanced Slider Controls - RÉDUIT */
 .slider-controls {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   background: rgba(255, 255, 255, 0.95);
-  padding: 0.875rem 1.75rem;
+  padding: 0.5rem 1rem;
   border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
   z-index: 10;
 }
 
 .slider-dots {
   display: flex;
-  gap: 0.625rem;
+  gap: 0.5rem;
 }
 
 .slider-dot {
-  width: 0.625rem;
-  height: 0.625rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background: rgba(28, 62, 58, 0.3);
   border: none;
@@ -476,8 +476,8 @@
 
 .slider-dot.active {
   background: #1C3E3A;
-  width: 2.5rem;
-  border-radius: 1rem;
+  width: 1.75rem;
+  border-radius: 0.75rem;
 }
 
 .dot-progress {
@@ -487,20 +487,20 @@
   height: 100%;
   background: linear-gradient(90deg, #A8D8C3, #7BC8A4);
   transition: width 0.1s linear;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
 }
 
 .slider-counter {
   display: flex;
   align-items: baseline;
-  gap: 0.25rem;
+  gap: 0.2rem;
   font-weight: 600;
   color: #1C3E3A;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .counter-current {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -510,28 +510,28 @@
 
 .counter-total {
   opacity: 0.7;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 }
 
-/* Enhanced Team Info */
+/* Enhanced Team Info - RÉDUIT */
 .team-info {
   animation: slideInRight 0.8s ease-out 0.4s both;
 }
 
-/* Enhanced Stats */
+/* Enhanced Stats - RÉDUIT */
 .team-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat-item {
   background: white;
-  padding: 2.25rem 1.75rem;
-  border-radius: 1.75rem;
+  padding: 1.25rem 1rem;
+  border-radius: 1.25rem;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   border: 2px solid rgba(168, 216, 195, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -540,21 +540,21 @@
 }
 
 .stat-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   border-color: #A8D8C3;
 }
 
 .stat-icon-wrapper {
-  width: 3rem;
-  height: 3rem;
-  margin: 0 auto 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0 auto 0.75rem;
   background: linear-gradient(135deg, #A8D8C3, #7BC8A4);
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(168, 216, 195, 0.4);
+  box-shadow: 0 4px 12px rgba(168, 216, 195, 0.4);
   transition: transform 0.3s ease;
 }
 
@@ -563,16 +563,16 @@
 }
 
 .stat-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.15rem;
+  height: 1.15rem;
   color: white;
 }
 
 .stat-number {
-  font-size: 2.75rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #1C3E3A;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   background: linear-gradient(135deg, #1C3E3A, #A8D8C3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -587,7 +587,7 @@
 @keyframes countUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -597,7 +597,7 @@
 
 .stat-label {
   color: #666;
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -617,53 +617,53 @@
   left: 100%;
 }
 
-/* Current Slide Info Card */
+/* Current Slide Info Card - RÉDUIT */
 .current-slide-info {
   background: white;
-  padding: 2rem;
-  border-radius: 1.75rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   border: 2px solid;
   transition: all 0.4s ease;
   animation: fadeInUp 0.6s ease-out 0.5s both;
 }
 
 .current-slide-info:hover {
-  transform: translateX(8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  transform: translateX(6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .info-icon {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .info-icon svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   color: white;
 }
 
 .info-content h4 {
   color: #1C3E3A;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .info-content p {
   color: #666;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.75rem;
+  line-height: 1.4;
   margin: 0;
 }
 
@@ -671,7 +671,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -682,7 +682,7 @@
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-60px);
+    transform: translateX(-50px);
   }
   to {
     opacity: 1;
@@ -693,7 +693,7 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(60px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
@@ -704,30 +704,30 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .team-content {
-    gap: 3rem;
+    gap: 2rem;
   }
   
   .team-stats {
-    gap: 1.25rem;
+    gap: 0.875rem;
   }
   
   .stat-item {
-    padding: 2rem 1.5rem;
+    padding: 1.125rem 0.875rem;
   }
   
   .team-image-wrapper {
-    min-height: 480px;
+    min-height: 350px;
   }
 }
 
 @media (max-width: 768px) {
   .team-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   
   .team-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
   
   .team-image-container {
@@ -736,11 +736,11 @@
   
   .team-stats {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 0.875rem;
   }
   
   .team-header {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
   }
   
   .team-decoration-circle-3 {
@@ -748,34 +748,34 @@
   }
   
   .slider-btn {
-    width: 3rem;
-    height: 3rem;
+    width: 2.25rem;
+    height: 2.25rem;
   }
   
   .slider-btn svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.125rem;
+    height: 1.125rem;
   }
   
   .slider-btn-prev {
-    left: 1rem;
+    left: 0.625rem;
   }
   
   .slider-btn-next {
-    right: 1rem;
+    right: 0.625rem;
   }
   
   .slider-controls {
-    bottom: 1.5rem;
-    padding: 0.75rem 1.5rem;
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
   }
   
   .team-image-wrapper {
-    min-height: 420px;
+    min-height: 320px;
   }
   
   .current-slide-info {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 }
 
@@ -785,60 +785,69 @@
   }
   
   .team-image-wrapper {
-    min-height: 350px;
+    min-height: 280px;
   }
   
   .slider-btn {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
   
   .slider-btn svg {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1rem;
+    height: 1rem;
   }
   
   .slider-btn-prev {
-    left: 0.75rem;
+    left: 0.5rem;
   }
   
   .slider-btn-next {
-    right: 0.75rem;
+    right: 0.5rem;
   }
   
   .slider-controls {
     flex-direction: column;
-    gap: 0.75rem;
-    padding: 0.75rem 1.25rem;
+    gap: 0.5rem;
+    padding: 0.5rem 0.875rem;
   }
   
   .team-image-overlay {
-    padding: 1.75rem;
+    padding: 1.125rem;
   }
   
   .overlay-title {
-    font-size: 1.5rem;
+    font-size: 0.95rem;
   }
   
   .overlay-subtitle {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   
   .stat-item {
-    padding: 1.75rem 1.25rem;
+    padding: 1rem 0.875rem;
   }
   
   .stat-number {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
   
   .current-slide-info {
     flex-direction: column;
     text-align: center;
+    padding: 0.875rem;
   }
   
   .info-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .info-content h4 {
+    font-size: 0.875rem;
+  }
+  
+  .info-content p {
+    font-size: 0.7rem;
   }
 }
