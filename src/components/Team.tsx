@@ -14,24 +14,21 @@ const Team: React.FC = () => {
       alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
       title: 'Notre Atelier Moderne',
       subtitle: 'Équipement de pointe pour un service excellence',
-      icon: Sparkles,
-      color: '#A8D8C3'
+      
     },
     {
       src: '/18.jpg',
       alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
       title: 'Experts Certifiés',
       subtitle: 'Une équipe passionnée et qualifiée',
-      icon: Award,
-      color: '#7BC8A4'
+      
     },
     {
       src: '/6.jpg',
       alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
       title: 'Performance Garantie',
       subtitle: 'Votre satisfaction est notre priorité',
-      icon: Zap,
-      color: '#5AB894'
+      
     }
   ];
 
@@ -85,7 +82,6 @@ const Team: React.FC = () => {
   }, [currentSlide]);
 
   const currentImage = teamImages[currentSlide];
-  const IconComponent = currentImage.icon;
 
   return (
     <section className="team-section">
@@ -135,9 +131,6 @@ const Team: React.FC = () => {
                     />
                     <div className="image-gradient-overlay"></div>
                     <div className="team-image-overlay">
-                      <div className="overlay-icon-wrapper" style={{ background: image.color }}>
-                        <IconComponent className="overlay-icon" />
-                      </div>
                       <h3 className="overlay-title">{image.title}</h3>
                       <p className="overlay-subtitle">{image.subtitle}</p>
                       <div className="overlay-decorator"></div>
@@ -210,17 +203,6 @@ const Team: React.FC = () => {
                 </div>
                 <div className="stat-label">Engagement Qualité</div>
                 <div className="stat-shine"></div>
-              </div>
-            </div>
-
-            {/* Current slide info card */}
-            <div className="current-slide-info" style={{ borderColor: currentImage.color }}>
-              <div className="info-icon" style={{ background: currentImage.color }}>
-                <IconComponent />
-              </div>
-              <div className="info-content">
-                <h4>{currentImage.title}</h4>
-                <p>{currentImage.subtitle}</p>
               </div>
             </div>
           </div>
