@@ -19,13 +19,13 @@ const ImageSlider: React.FC = () => {
 
   const images: ImageData[] = [
     {
-      image: "/2.jpg",
-      title: "Notre Équipe Experte",
+      image: "/14.jpg",
+      title: "Nos Bureaux Proffesionel",
       description: "Des professionnels dévoués à votre service automobile",
       alt: "Équipe de mécaniciens experts"
     },
     {
-      image: "/6.jpg",
+      image: "/13.jpg",
       title: "Atelier Moderne",
       description: "Équipements de pointe pour un service de qualité",
       alt: "Atelier moderne avec équipements"
@@ -39,7 +39,7 @@ const ImageSlider: React.FC = () => {
     },
 
     {
-      image: "/1.jpg",
+      image: "/16.jpg",
       title: "Espace de Travail",
       description: "Un environnement organisé pour votre tranquillité d'esprit",
       alt: "Espace de travail organisé"
