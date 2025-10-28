@@ -43,13 +43,13 @@ const Team: React.FC = () => {
         }
         return prev + 0.5;
       });
-    }, 25); 
+    }, 30); 
 
     const slideInterval = setInterval(() => {
       setDirection('next');
       setCurrentSlide((prev) => (prev + 1) % teamImages.length);
       setProgress(0);
-    }, 7000);
+    }, 6000);
 
     return () => {
       clearInterval(progressInterval);
@@ -70,7 +70,7 @@ const Team: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + teamImages.length) % teamImages.length);
     setProgress(0);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 5000);
+    setTimeout(() => setIsAutoPlaying(true), 6000);
   }, [teamImages.length]);
 
   const goToSlide = useCallback((index: number) => {
