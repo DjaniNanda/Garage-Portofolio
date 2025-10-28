@@ -62,7 +62,7 @@ const Team: React.FC = () => {
     setCurrentSlide((prev) => (prev + 1) % teamImages.length);
     setProgress(0);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 5000);
+    setTimeout(() => setIsAutoPlaying(true), 6000);
   }, [teamImages.length]);
 
   const prevSlide = useCallback(() => {
@@ -78,7 +78,7 @@ const Team: React.FC = () => {
     setCurrentSlide(index);
     setProgress(0);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 5000);
+    setTimeout(() => setIsAutoPlaying(true), 6000);
   }, [currentSlide]);
 
   const currentImage = teamImages[currentSlide];
