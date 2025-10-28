@@ -287,9 +287,9 @@
   opacity: 1;
   background: linear-gradient(
     to bottom,
-    rgba(243, 242, 242, 0.4) 0%,
-    rgba(196, 196, 196, 0.6) 40%,
-    rgba(0, 0, 0, 0.98) 100%
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(28, 62, 58, 0.98) 100%
   );
 }
 
@@ -462,7 +462,6 @@
 
 .stat-item {
   background: white;
-  margin-top: 2.7rem;
   padding: 1.5rem 1.25rem;
   border-radius: 1.25rem;
   text-align: center;
