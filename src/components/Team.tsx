@@ -1,8 +1,54 @@
-import React from 'react';
-import { Users, Award, Clock, Shield, Wrench, Heart, Star } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import './Team.css';
 
 const Team: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const teamImages = [
+    {
+      src: '/2.jpg',
+      alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
+      title: 'Service Premium',
+      subtitle: 'Excellence et satisfaction garanties'
+    },
+    {
+      src: '/18.jpg',
+      alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
+      title: 'Notre Atelier',
+      subtitle: 'Équipement moderne et professionnel'
+      
+    },
+    {
+      src: '/6.jpg',
+      
+      alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
+      title: 'Experts Qualifiés',
+      subtitle: 'Des mécaniciens certifiés à votre service'
+    }
+  ];
+
+  // Auto-play slider
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % teamImages.length);
+    }, 5000); 
+
+    return () => clearInterval(interval);
+  }, [teamImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % teamImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + teamImages.length) % teamImages.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <section className="team-section">
       <div className="team-container">
@@ -31,14 +77,55 @@ const Team: React.FC = () => {
 
         {/* Team Content */}
         <div className="team-content">
-          {/* Team Image */}
+          {/* Team Image Slider */}
           <div className="team-image-container">
-            <div className="team-image-wrapper">
-              <img 
-                src="/2.jpg" 
-                alt="Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé"
-                className="team-image"
-              />
+            <div className="team-slider">
+              <div className="team-image-wrapper">
+                {teamImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`team-slide ${index === currentSlide ? 'active' : ''}`}
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="team-image"
+                    />
+                    <div className="team-image-overlay">
+                      <h3 className="overlay-title">{image.title}</h3>
+                      <p className="overlay-subtitle">{image.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Navigation Buttons */}
+              <button 
+                className="slider-btn slider-btn-prev" 
+                onClick={prevSlide}
+                aria-label="Image précédente"
+              >
+                <ChevronLeft />
+              </button>
+              <button 
+                className="slider-btn slider-btn-next" 
+                onClick={nextSlide}
+                aria-label="Image suivante"
+              >
+                <ChevronRight />
+              </button>
+
+              {/* Dots Indicator */}
+              <div className="slider-dots">
+                {teamImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
+                    onClick={() => goToSlide(index)}
+                    aria-label={`Aller à l'image ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
