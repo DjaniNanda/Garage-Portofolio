@@ -266,7 +266,7 @@
   transform: scale(1.05);
 }
 
-/* IMPROVED: Stronger gradient overlay for better text readability */
+/* IMPROVED: Balanced gradient - clear images with readable text */
 .image-gradient-overlay {
   position: absolute;
   top: 0;
@@ -275,25 +275,26 @@
   bottom: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.5) 40%,
-    rgba(28, 62, 58, 0.95) 100%
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.7) 85%,
+    rgba(28, 62, 58, 0.90) 100%
   );
   opacity: 1;
-  transition: opacity 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .team-image-wrapper:hover .image-gradient-overlay {
-  opacity: 1;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.6) 40%,
-    rgba(28, 62, 58, 0.98) 100%
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.75) 85%,
+    rgba(28, 62, 58, 0.92) 100%
   );
 }
 
-/* IMPROVED: Enhanced Image overlay with better readability */
+/* IMPROVED: Enhanced Image overlay with strong text shadows and background */
 .team-image-overlay {
   position: absolute;
   bottom: 0;
@@ -304,7 +305,7 @@
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  background: linear-gradient(to top, rgba(28, 62, 58, 0.3), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
 }
 
 .team-slide.active .team-image-overlay {
@@ -347,13 +348,16 @@
   color: white;
 }
 
-/* IMPROVED: Larger, more readable overlay text */
+/* IMPROVED: Strong text shadows for readability on light backgrounds */
 .overlay-title {
   font-size: clamp(1.3rem, 3vw, 1.5rem);
   font-weight: 800;
   margin-bottom: 0.5rem;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5), 
-               0 1px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 4px 8px rgba(0, 0, 0, 0.7),
+    0 8px 16px rgba(0, 0, 0, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
   letter-spacing: 0.3px;
   line-height: 1.2;
 }
@@ -362,8 +366,11 @@
   font-size: clamp(0.95rem, 2vw, 1.05rem);
   opacity: 0.98;
   line-height: 1.5;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5),
-               0 1px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 3px 6px rgba(0, 0, 0, 0.7),
+    0 6px 12px rgba(0, 0, 0, 0.5),
+    1px 1px 3px rgba(0, 0, 0, 0.8);
   font-weight: 500;
   max-width: 90%;
 }
@@ -454,6 +461,7 @@
   animation: slideInRight 0.8s ease-out 0.4s both;
 }
 
+/* IMPROVED: Enhanced Stats with better visibility */
 .team-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -462,6 +470,7 @@
 
 .stat-item {
   background: white;
+  margin-top: 2.7rem;
   padding: 1.5rem 1.25rem;
   border-radius: 1.25rem;
   text-align: center;
@@ -502,6 +511,7 @@
   color: white;
 }
 
+/* IMPROVED: Larger, more prominent stat numbers */
 .stat-number {
   font-size: 2rem;
   font-weight: 800;
@@ -530,6 +540,7 @@
   }
 }
 
+/* IMPROVED: More prominent stat labels */
 .stat-label {
   color: #555;
   font-size: 0.75rem;
