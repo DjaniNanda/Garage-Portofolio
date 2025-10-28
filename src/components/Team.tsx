@@ -164,31 +164,6 @@ const Team: React.FC = () => {
                 <span className="btn-ripple"></span>
               </button>
 
-              {/* Enhanced Dots with Progress */}
-              <div className="slider-controls">
-                <div className="slider-dots">
-                  {teamImages.map((image, index) => (
-                    <button
-                      key={index}
-                      className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
-                      onClick={() => goToSlide(index)}
-                      aria-label={`Aller à l'image ${index + 1}`}
-                    >
-                      {index === currentSlide && (
-                        <span 
-                          className="dot-progress" 
-                          style={{ width: `${progress}%` }}
-                        ></span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-                <div className="slider-counter">
-                  <span className="counter-current">{currentSlide + 1}</span>
-                  <span className="counter-separator">/</span>
-                  <span className="counter-total">{teamImages.length}</span>
-                </div>
-              </div>
             </div>
           </div>
 
