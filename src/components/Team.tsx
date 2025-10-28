@@ -1,61 +1,100 @@
-import React, { useState, useEffect } from 'react';
-import { Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Users, ChevronLeft, ChevronRight, Sparkles, TrendingUp, Award, Zap } from 'lucide-react';
 import './Team.css';
 
 const Team: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [direction, setDirection] = useState<'next' | 'prev'>('next');
   
   const teamImages = [
     {
       src: '/2.jpg',
       alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
-      title: 'Service Premium',
-      subtitle: 'Excellence et satisfaction garanties'
+      title: 'Notre Atelier Moderne',
+      subtitle: 'Équipement de pointe pour un service excellence',
+      icon: Sparkles,
+      color: '#A8D8C3'
     },
     {
       src: '/18.jpg',
       alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
-      title: 'Notre Atelier',
-      subtitle: 'Équipement moderne et professionnel'
-      
+      title: 'Experts Certifiés',
+      subtitle: 'Une équipe passionnée et qualifiée',
+      icon: Award,
+      color: '#7BC8A4'
     },
     {
       src: '/6.jpg',
-      
       alt: 'Équipe Exact Automobile - Mécaniciens professionnels à Yaoundé',
-      title: 'Experts Qualifiés',
-      subtitle: 'Des mécaniciens certifiés à votre service'
+      title: 'Performance Garantie',
+      subtitle: 'Votre satisfaction est notre priorité',
+      icon: Zap,
+      color: '#5AB894'
     }
   ];
 
-  // Auto-play slider
+  // Auto-play with progress
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % teamImages.length);
-    }, 5000); 
+    if (!isAutoPlaying) return;
 
-    return () => clearInterval(interval);
+    const progressInterval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          return 0;
+        }
+        return prev + 0.5;
+      });
+    }, 25); // Update every 25ms for smooth progress
+
+    const slideInterval = setInterval(() => {
+      setDirection('next');
+      setCurrentSlide((prev) => (prev + 1) % teamImages.length);
+      setProgress(0);
+    }, 5000);
+
+    return () => {
+      clearInterval(progressInterval);
+      clearInterval(slideInterval);
+    };
+  }, [isAutoPlaying, teamImages.length]);
+
+  const nextSlide = useCallback(() => {
+    setDirection('next');
+    setCurrentSlide((prev) => (prev + 1) % teamImages.length);
+    setProgress(0);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
   }, [teamImages.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % teamImages.length);
-  };
-
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
+    setDirection('prev');
     setCurrentSlide((prev) => (prev - 1 + teamImages.length) % teamImages.length);
-  };
+    setProgress(0);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  }, [teamImages.length]);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
+    setDirection(index > currentSlide ? 'next' : 'prev');
     setCurrentSlide(index);
-  };
+    setProgress(0);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  }, [currentSlide]);
+
+  const currentImage = teamImages[currentSlide];
+  const IconComponent = currentImage.icon;
 
   return (
     <section className="team-section">
       <div className="team-container">
-        {/* Background decorative elements */}
+        {/* Enhanced Background decorative elements */}
         <div className="team-bg-decoration">
           <div className="team-decoration-circle team-decoration-circle-1"></div>
           <div className="team-decoration-circle team-decoration-circle-2"></div>
+          <div className="team-decoration-circle team-decoration-circle-3"></div>
         </div>
 
         {/* Header */}
@@ -63,10 +102,11 @@ const Team: React.FC = () => {
           <div className="team-badge">
             <Users className="team-badge-icon" />
             <span>Notre Équipe</span>
+            <div className="badge-shimmer"></div>
           </div>
           
           <h2 className="team-title">
-            Une équipe passionnée à votre service
+            Une équipe <span className="title-highlight">passionnée</span> à votre service
           </h2>
           
           <p className="team-subtitle">
@@ -77,35 +117,43 @@ const Team: React.FC = () => {
 
         {/* Team Content */}
         <div className="team-content">
-          {/* Team Image Slider */}
+          {/* Enhanced Team Image Slider */}
           <div className="team-image-container">
             <div className="team-slider">
               <div className="team-image-wrapper">
                 {teamImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`team-slide ${index === currentSlide ? 'active' : ''}`}
+                    className={`team-slide ${index === currentSlide ? 'active' : ''} ${
+                      index === currentSlide ? `slide-${direction}` : ''
+                    }`}
                   >
                     <img 
                       src={image.src} 
                       alt={image.alt}
                       className="team-image"
                     />
+                    <div className="image-gradient-overlay"></div>
                     <div className="team-image-overlay">
+                      <div className="overlay-icon-wrapper" style={{ background: image.color }}>
+                        <IconComponent className="overlay-icon" />
+                      </div>
                       <h3 className="overlay-title">{image.title}</h3>
                       <p className="overlay-subtitle">{image.subtitle}</p>
+                      <div className="overlay-decorator"></div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* Navigation Buttons */}
+              {/* Enhanced Navigation Buttons */}
               <button 
                 className="slider-btn slider-btn-prev" 
                 onClick={prevSlide}
                 aria-label="Image précédente"
               >
                 <ChevronLeft />
+                <span className="btn-ripple"></span>
               </button>
               <button 
                 className="slider-btn slider-btn-next" 
@@ -113,41 +161,91 @@ const Team: React.FC = () => {
                 aria-label="Image suivante"
               >
                 <ChevronRight />
+                <span className="btn-ripple"></span>
               </button>
 
-              {/* Dots Indicator */}
-              <div className="slider-dots">
-                {teamImages.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
-                    onClick={() => goToSlide(index)}
-                    aria-label={`Aller à l'image ${index + 1}`}
-                  />
-                ))}
+              {/* Enhanced Dots with Progress */}
+              <div className="slider-controls">
+                <div className="slider-dots">
+                  {teamImages.map((image, index) => (
+                    <button
+                      key={index}
+                      className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
+                      onClick={() => goToSlide(index)}
+                      aria-label={`Aller à l'image ${index + 1}`}
+                    >
+                      {index === currentSlide && (
+                        <span 
+                          className="dot-progress" 
+                          style={{ width: `${progress}%` }}
+                        ></span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+                <div className="slider-counter">
+                  <span className="counter-current">{currentSlide + 1}</span>
+                  <span className="counter-separator">/</span>
+                  <span className="counter-total">{teamImages.length}</span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Team Info */}
+          {/* Enhanced Team Info */}
           <div className="team-info">
-            {/* Stats */}
+            {/* Enhanced Stats */}
             <div className="team-stats">
-              <div className="stat-item">
-                <div className="stat-number">10+</div>
-                <div className="stat-label">Mécaniciens</div>
+              <div className="stat-item" style={{ animationDelay: '0.1s' }}>
+                <div className="stat-icon-wrapper">
+                  <Users className="stat-icon" />
+                </div>
+                <div className="stat-number">
+                  <span className="number-animated">10</span>+
+                </div>
+                <div className="stat-label">Mécaniciens Experts</div>
+                <div className="stat-shine"></div>
               </div>
-              <div className="stat-item">
-                <div className="stat-number">10+</div>
-                <div className="stat-label">Années d'expérience</div>
+              <div className="stat-item" style={{ animationDelay: '0.2s' }}>
+                <div className="stat-icon-wrapper">
+                  <TrendingUp className="stat-icon" />
+                </div>
+                <div className="stat-number">
+                  <span className="number-animated">10</span>+
+                </div>
+                <div className="stat-label">Années d'Excellence</div>
+                <div className="stat-shine"></div>
               </div>
-              <div className="stat-item">
-                <div className="stat-number">1000+</div>
-                <div className="stat-label">Clients satisfaits</div>
+              <div className="stat-item" style={{ animationDelay: '0.3s' }}>
+                <div className="stat-icon-wrapper">
+                  <Award className="stat-icon" />
+                </div>
+                <div className="stat-number">
+                  <span className="number-animated">1000</span>+
+                </div>
+                <div className="stat-label">Clients Satisfaits</div>
+                <div className="stat-shine"></div>
               </div>
-              <div className="stat-item">
-                <div className="stat-number">100%</div>
-                <div className="stat-label">Engagement qualité</div>
+              <div className="stat-item" style={{ animationDelay: '0.4s' }}>
+                <div className="stat-icon-wrapper">
+                  <Sparkles className="stat-icon" />
+                </div>
+                <div className="stat-number">
+                  <span className="number-animated">100</span>%
+                </div>
+                <div className="stat-label">Engagement Qualité</div>
+                <div className="stat-shine"></div>
+              </div>
+            </div>
+
+            {/* Current slide info card */}
+            <div className="current-slide-info" style={{ borderColor: currentImage.color }}>
+              <div className="info-icon" style={{ background: currentImage.color }}>
+                <IconComponent />
+              </div>
+              <div className="info-content">
+                <h4>{currentImage.title}</h4>
+                <p>{currentImage.subtitle}</p>
               </div>
             </div>
           </div>
