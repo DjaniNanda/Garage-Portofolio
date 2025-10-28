@@ -131,7 +131,7 @@
 }
 
 .team-title {
-  color: #1d302e;
+  color: #4a837d;
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   margin-bottom: 1rem;
@@ -139,7 +139,7 @@
 }
 
 .title-highlight {
-  background: linear-gradient(135deg, #1C3E3A, #A8D8C3, #1C3E3A);
+  background: linear-gradient(135deg, #17312e, #70887e, #0b1816);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
